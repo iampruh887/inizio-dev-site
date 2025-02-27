@@ -1,12 +1,8 @@
+import React from "react";
 import Sponsors from "./components/Sponsors/Sponsors";
-import "./App.css";
 
 function App() {
-  return (
-    <div className="app">
-      <Sponsors />
-    </div>
-  );
+  return <Sponsors />;
 }
 
 export default App;
