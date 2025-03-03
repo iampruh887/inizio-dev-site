@@ -1,0 +1,60 @@
+:root {
+    --primary: #ff6b00;
+    --bg-light: #fff5cf;
+    --bg-dark: #131313;
+    --text-light: #FFF5CF;
+    --text-dark: #333333;
+}
+.heros {
+    width: 100%;
+    min-height: 90vh;
+    background-color: var(--primary);
+    overflow: hidden;
+}
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 75px;
+    gap: 50px;
+    font-family: "Outfit", sans-serif;
+    color: var(--text-light);
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    /* overlay:auto; */
+    mix-blend-mode: color-dodge;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.hero_title {
+    left: calc(50% - 486.5px);
+    color: #fff5cf;
+    font-family: "Outfit", var(--default-font-family);
+    font-size: 180px;
+    font-weight: 900;
+    line-height: 140px;
+    text-align: center;
+  }
+  
+  .hero_description {
+    left: calc(50% - 382.5px);
+    color: #fff5cf;
+    font-family: "Inter", var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: center;
+    text-transform: uppercase;  font-style: normal;
+
+  }
