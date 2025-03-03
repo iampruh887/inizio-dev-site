@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import Sponsors from "./components/Sponsors/Sponsors";
+>>>>>>> parent of 2504b4b (fw)
 import "./App.css";
 
 function App() {
@@ -6,7 +10,10 @@ function App() {
     <div className="app">
       <Sponsors />
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 2504b4b (fw)
   );
 }
 
