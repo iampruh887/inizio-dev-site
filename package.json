@@ -26,10 +26,9 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0",
-    "devDependencies": {
     "tailwindcss": "^3.x",
     "postcss": "^8.x",
     "autoprefixer": "^10.x"
-}
+
   }
 }
