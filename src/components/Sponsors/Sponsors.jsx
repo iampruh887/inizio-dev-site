@@ -1,6 +1,6 @@
 import React from "react";
 import SponsorSection from "./SponsorSection";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import { SPONSOR_TYPES } from "../../constants/sponsorData";
 import "./Sponsors.css";
 

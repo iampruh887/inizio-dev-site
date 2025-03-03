@@ -58,3 +58,31 @@
     text-transform: uppercase;  font-style: normal;
 
   }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero_title {
+        font-size: 120px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero_title {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors__title {
+        font-size: 48px;
+    }
+
+    .sponsors__description {
+        font-size: 14px;
+    }
+}

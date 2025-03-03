@@ -12,18 +12,22 @@ const eventsData = [
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+    no: "#001",
   },
   {
     text: "Another amazing event happening soon!",
     image: "https://via.placeholder.com/400",
+    no: "#002",
   },
   {
     text: "Don't miss this exclusive session!",
     image: "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+    no: "#003",
   },
   {
     text: "Final event details here, be ready!",
     image: "https://via.placeholder.com/400",
+    no: "#004",
   },
 ];
 
@@ -36,12 +40,12 @@ const EventCard = ({ currentEvent }) => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5 }}
-        className="flex justify-center gap-6 py-10 bg-yellow-100"
+        className="Event-container flex justify-center gap-6 py-10 bg-yellow-100"
       >
         <div className="rectangle bg-gray-700 text-white p-6 max-w-md">
           <p className="event-description">{eventsData[currentEvent].text}</p>
-          <p className="event text-orange-500 mt-2">@event</p>
-          <span className="hash-001">#001</span>
+          <p className="event">@event</p>
+          <span className="hash-001">{eventsData[currentEvent].no}</span>
           <div className="arrow" />
         </div>
 
@@ -61,7 +65,7 @@ const EventNavigation = ({ setCurrentEvent }) => {
         <button
           key={index}
           onClick={() => setCurrentEvent(index)}
-          className="border p-2 px-4 rounded-lg"
+          className="event-button border p-2 px-4 rounded-lg"
         >
           Event {index + 1}
         </button>
@@ -70,6 +74,14 @@ const EventNavigation = ({ setCurrentEvent }) => {
   );
 };
 
+const Event = ({currentEvent,setCurrentEvent})=>{
+  return(
+  <div className="event-tab">
+    <EventCard currentEvent={currentEvent} />
+    <EventNavigation setCurrentEvent={setCurrentEvent} />
+  </div>
+  );
+};
 
 
 const App = () => {
@@ -86,8 +98,7 @@ const App = () => {
     <div>
       <Navbar />
       <Hero title={events_hero_title} desc={events_hero_desc} />
-      <EventCard currentEvent={currentEvent} />
-      <EventNavigation setCurrentEvent={setCurrentEvent} />
+      <Event currentEvent={currentEvent} setCurrentEvent={setCurrentEvent}/>
       <Footer />
     </div>
   );
