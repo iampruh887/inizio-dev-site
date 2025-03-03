@@ -1,0 +1,258 @@
+:root {
+    --primary: #ff6b00;
+    --bg-light: #fff5cf;
+    --bg-dark: #131313;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+.events {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+/* Hero Section */
+.events__hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 75px;
+    font-family: "Outfit", sans-serif;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.events__hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.events__title {
+    position: relative;
+    font-size: 180px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: auto;
+    z-index: 1;
+    line-height: 1;
+}
+
+.events__description {
+    position: relative;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 20px auto auto;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+/* Main Content */
+.events__content {
+    position: relative;
+    background-color: var(--bg-light);
+    border-radius: 22px;
+    margin-top: -100px;
+    padding: 80px;
+    z-index: 2;
+}
+
+.events__card-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Event Card */
+.event-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 22px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.event-card__content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.event-card__text-content {
+    flex: 1;
+    color: var(--text-light);
+}
+
+.event-card__description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.event-card__tag {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.event-card__tag-text {
+    color: var(--primary);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.event-card__tag-number {
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.event-card__arrow {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+    transform: rotate(-45deg);
+}
+
+.event-card__image-container {
+    flex: 2;
+    aspect-ratio: 16/9;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.event-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.event-card:hover .event-card__image {
+    transform: scale(1.05);
+}
+
+/* Progress Bar */
+.events__progress {
+    margin: 40px 0;
+}
+
+.events__progress-bar {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.events__progress-segment {
+    width: 160px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.events__progress-segment.active {
+    background: var(--primary);
+}
+
+/* Buttons */
+.events__buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.events__button {
+    padding: 20px 40px;
+    border-radius: 22px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.events__button:hover,
+.events__button.active {
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .events__title {
+        font-size: 120px;
+    }
+
+    .events__content {
+        padding: 60px 40px;
+    }
+
+    .event-card__content {
+        flex-direction: column;
+    }
+
+    .event-card__image-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .events__hero {
+        padding: 20px;
+    }
+
+    .events__title {
+        font-size: 64px;
+    }
+
+    .events__content {
+        padding: 40px 20px;
+        margin-top: -50px;
+    }
+
+    .event-card {
+        padding: 20px;
+    }
+
+    .events__progress-segment {
+        width: 80px;
+    }
+
+    .events__button {
+        width: calc(50% - 10px);
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .events__title {
+        font-size: 48px;
+    }
+
+    .events__description {
+        font-size: 14px;
+    }
+
+    .event-card__tag-text {
+        font-size: 36px;
+    }
+
+    .event-card__tag-number {
+        font-size: 18px;
+    }
+
+    .events__button {
+        width: 100%;
+    }
+}

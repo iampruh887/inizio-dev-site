@@ -1,19 +1,19 @@
-<<<<<<< HEAD
-
-=======
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Teams from "./pages/Teams";
 import Sponsors from "./components/Sponsors/Sponsors";
->>>>>>> parent of 2504b4b (fw)
-import "./App.css";
+import Events from "./pages/Events";
 
 function App() {
   return (
-    <div className="app">
-      <Sponsors />
-    </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 2504b4b (fw)
+    <Router>
+      <Routes>
+        <Route path="/" element={<Teams />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+    </Router>
   );
 }
 
