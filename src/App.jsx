@@ -1,12 +1,12 @@
-import React from "react";
-import Sponsors from "./components/Sponsors/Sponsors";
-import Events from "./components/Events/Events";
+
+import "./App.css";
+
 function App() {
   return (
-  <>
-  <Events/>
-  {/* <Sponsors/> */}
-  </>
+    <div className="app">
+      <Sponsors />
+    </div>
+
   );
 }
 
