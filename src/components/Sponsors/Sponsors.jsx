@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../../components/shared/Footer";
+import Footer from "../Footer";
 import SponsorSection from "./SponsorSection";
 import { SPONSOR_TYPES } from "../../constants/sponsorData";
 import "./Sponsors.css";
