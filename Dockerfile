@@ -16,11 +16,23 @@ FROM nginx:alpine
 # Copy built assets
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Create nginx configuration that uses environment variable for port
+RUN echo $'\
+    server { \n\
+    listen $PORT; \n\
+    location / { \n\
+    root /usr/share/nginx/html; \n\
+    index index.html index.htm; \n\
+    try_files $uri $uri/ /index.html; \n\
+    } \n\
+    }' > /etc/nginx/conf.d/default.conf.template
 
-# Copy start script
-COPY start.sh /start.sh
+# Create start script
+RUN echo $'\
+    #!/bin/sh \n\
+    envsubst \$PORT < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf \n\
+    nginx -g "daemon off;"' > /start.sh
+
 RUN chmod +x /start.sh
 
 ENV PORT=80
