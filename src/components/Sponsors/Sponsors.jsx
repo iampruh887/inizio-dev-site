@@ -1,5 +1,4 @@
 import React from "react";
-import Navigation from "../../components/shared/Navigation";
 import Footer from "../../components/shared/Footer";
 import SponsorSection from "./SponsorSection";
 import { SPONSOR_TYPES } from "../../constants/sponsorData";
