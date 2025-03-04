@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
