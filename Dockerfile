@@ -1,3 +1,4 @@
+# Build Stage
 FROM node:20-alpine as build
 
 # Set working directory
@@ -15,16 +16,16 @@ COPY . .
 # Build the app
 RUN npm run build
 
-# Production stage
+# Production Stage
 FROM nginx:alpine
 
 # Copy built files from build stage
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Create nginx configuration with environment variable support
+# Create nginx configuration template
 RUN echo $'\
     server { \n\
-    listen $PORT; \n\
+    listen 80; \n\
     location / { \n\
     root /usr/share/nginx/html; \n\
     index index.html index.htm; \n\
@@ -35,17 +36,14 @@ RUN echo $'\
 # Create start script
 RUN echo $'\
     #!/bin/sh \n\
-    envsubst \$PORT < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf \n\
+    envsubst < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf \n\
     nginx -g "daemon off;"' > /start.sh
 
 # Make start script executable
 RUN chmod +x /start.sh
 
-# Set default port
-ENV PORT=80
-
-# Expose port
+# Expose port dynamically
 EXPOSE 80
 
-# Start nginx using the start script
+# Start Nginx
 CMD ["/start.sh"]
