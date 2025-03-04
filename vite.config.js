@@ -10,6 +10,11 @@ export default defineConfig({
   preview: {
     host: true,
     port: process.env.PORT || 3000,
-    allowedHosts: ["healthcheck.railway.app", "*.railway.app"],
+    allowedHosts: [
+      "localhost",
+      "*.railway.app",
+      "railway.app",
+      "healthcheck.railway.app",
+    ],
   },
 });
