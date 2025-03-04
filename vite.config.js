@@ -8,6 +8,8 @@ export default defineConfig({
     port: process.env.PORT || 3000,
   },
   preview: {
+    host: true,
     port: process.env.PORT || 3000,
+    allowedHosts: ["healthcheck.railway.app", "*.railway.app"],
   },
 });
