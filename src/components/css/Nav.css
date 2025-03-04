@@ -11,6 +11,7 @@
     padding-right:63px;
     padding-left:63px;
     justify-content: space-between;
+    z-index: 100;
   }
   .asset-x {
     position: absolute;
@@ -31,7 +32,7 @@
     text-align: center;
     z-index: 4;
   }
-  .events {
+  .eventss {
     color: #ffffff;
     font-family: Outfit, var(--default-font-family);
     font-size: 14px;

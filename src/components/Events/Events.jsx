@@ -96,7 +96,7 @@ const App = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero title={events_hero_title} desc={events_hero_desc} />
       <Event currentEvent={currentEvent} setCurrentEvent={setCurrentEvent}/>
       <Footer />
