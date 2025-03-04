@@ -17,7 +17,7 @@ function App() {
         {/* <Route path="/Contact" element={<Contact />} /> */}
       </Routes>
   </Router>
-  <Events/>
+  {/* <Events/> */}
   {/* <Sponsors/> */}
   </>
   );
