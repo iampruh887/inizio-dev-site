@@ -1,49 +1,26 @@
-# Build Stage
-FROM node:20-alpine as build
+# Use an official Node runtime as the base image
+FROM node:20-alpine
 
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy package files
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy all files
+# Copy the rest of the application code
 COPY . .
 
-# Build the app
+# Build the application
 RUN npm run build
 
-# Production Stage
-FROM nginx:alpine
+# Install serve to run the application
+RUN npm install -g serve
 
-# Copy built files from build stage
-COPY --from=build /app/dist /usr/share/nginx/html
+# Expose the port the app runs on
+EXPOSE 3000
 
-# Create nginx configuration template
-RUN echo $'\
-    server { \n\
-    listen 80; \n\
-    location / { \n\
-    root /usr/share/nginx/html; \n\
-    index index.html index.htm; \n\
-    try_files $uri $uri/ /index.html; \n\
-    } \n\
-    }' > /etc/nginx/conf.d/default.conf.template
-
-# Create start script
-RUN echo $'\
-    #!/bin/sh \n\
-    envsubst < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf \n\
-    nginx -g "daemon off;"' > /start.sh
-
-# Make start script executable
-RUN chmod +x /start.sh
-
-# Expose port dynamically
-EXPOSE 80
-
-# Start Nginx
-CMD ["/start.sh"]
+# Command to run the application
+CMD ["serve", "-s", "dist", "-l", "3000"]

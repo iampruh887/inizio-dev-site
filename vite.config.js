@@ -4,17 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,
-    port: process.env.PORT || 3000,
-  },
-  preview: {
-    host: true,
-    port: process.env.PORT || 3000,
-    allowedHosts: [
-      "localhost",
-      "*.railway.app",
-      "railway.app",
-      "healthcheck.railway.app",
-    ],
+    host: "0.0.0.0",
+    port: 3000,
   },
 });

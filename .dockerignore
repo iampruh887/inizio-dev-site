@@ -4,3 +4,11 @@ dist
 .env
 *.log
 .DS_Store
+node_modules
+dist
+.git
+.gitignore
+.env
+.dockerignore
+Dockerfile
+README.md
