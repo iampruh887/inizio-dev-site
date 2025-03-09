@@ -115,8 +115,45 @@ function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
 
+                <div className="event-list">
+                  <div className="events">
+                    <div className="event event-l wide">
+                      <div className="event-text">
+                        <h3 className="event-title">Event 01</h3>
+                        <p className="event-des">
+                          Where ideas collide and opportunities emerge!
+                          Experience startup showcases, power-packed panels, and
+                          game-changing networking at the heart of innovation.
+                        </p>
+                      </div>
+                      <div className="event-outline">
+                        <div className="event-img-l">
+                          <div className="event-tag">EVENT 01</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="events">
+                    <div className="event event-r wide">
+                      <div className="event-outline">
+                        <div className="event-img-r">
+                          <div className="event-tag tag-r">EVENT 02</div>
+                        </div>
+                      </div>
+                      <div className="event-text">
+                        <h3 className="event-title">Event 02</h3>
+                        <p className="event-des">
+                          Where ideas collide and opportunities emerge!
+                          Experience startup showcases, power-packed panels, and
+                          game-changing networking at the heart of innovation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="merch-container">
                 <div className="wide">
                   <div className="merches">
