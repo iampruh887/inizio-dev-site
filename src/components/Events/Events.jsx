@@ -18,7 +18,7 @@ const eventsData = [
   },
   {
     text: "Another amazing event happening soon!",
-    image: "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+    image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
     no: "#002",
   },
   {
@@ -29,7 +29,7 @@ const eventsData = [
   },
   {
     text: "Final event details here, be ready!",
-    image: "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+    image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
     no: "#004",
   },
 ];
@@ -37,14 +37,7 @@ const eventsData = [
 const EventCard = ({ currentEvent }) => {
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        key={currentEvent}
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -50 }}
-        transition={{ duration: 0.5 }}
-        className="Event-container flex justify-center gap-6 py-10 bg-yellow-100"
-      >
+      <div className="Event-container  flex justify-center gap-6 py-10 bg-yellow-100">
         <div className="rectangle bg-gray-700 text-white p-6 max-w-md">
           <p className="event-description">{eventsData[currentEvent].text}</p>
           <p className="event">@event</p>
@@ -52,12 +45,21 @@ const EventCard = ({ currentEvent }) => {
           <div className="arrow" />
         </div>
 
+      <motion.div
+        key={currentEvent}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.5 }}
+        className=""
+      >
         <img
           src={eventsData[currentEvent].image}
           alt="Event"
           className="image object-cover"
         />
       </motion.div>
+      </div>
     </AnimatePresence>
   );
 };
@@ -100,7 +102,7 @@ const App = () => {
     <div className="relative">
       <Hero title={events_hero_title} desc={events_hero_desc} />
       <div className="relative z-20 mt-[-100px]">
-        {/* {" "} */}
+        {" "}
         {/* Added container with negative margin */}
         <Event currentEvent={currentEvent} setCurrentEvent={setCurrentEvent} />
         <Footer />

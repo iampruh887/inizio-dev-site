@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Events from "./components/Events/Events";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 import TeamPic from "./components_team/TeamPic";
 import Body from "./components_team/Body";
@@ -34,7 +35,7 @@ function App() {
               <>
                 <Navbar />
                 <Routes>
-                  <Route path="/" element={<Events />} />
+                  <Route path="/" element={<Home />} />
                   <Route path="/Events" element={<Events />} />
                   <Route path="/Sponsors" element={<Sponsors />} />
                 </Routes>
