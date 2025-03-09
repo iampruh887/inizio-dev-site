@@ -79,6 +79,10 @@
     height: 2rem;
     margin: 0 2rem;
 }
+.nav-wheel:hover {
+    transition: transform 2s ease-in-out;
+    transform: rotate(360deg);
+}
 
 /* Mobile Menu Button */
 .mobile-menu-btn {

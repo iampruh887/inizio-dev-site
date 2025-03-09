@@ -1,0 +1,1475 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   transition: all 0.15s ease-in-out;
+   /* box-sizing: border-box; */
+}
+
+@font-face {
+   font-family: 'Roboto';
+   font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;
+   font-style: NORMAL_OR_ITALIC;
+   font-weight: NUMERIC_RANGE_LOW_TO_HIGH;
+   src: url(FONT_FILE_NAME.woff2) format('woff2');
+}
+
+/* #ff9f5a */
+/* #ff6b00 */
+
+
+/* fonts used in the project */
+@font-face {
+   font-family: 'LexendExtraBold';
+   src: url('assets/fonts/Lexend-ExtraBold.ttf') format('truetype');
+   font-weight: 800;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'LexendBold';
+   src: url('assets/fonts/Lexend-Bold.ttf') format('truetype');
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'LexendRegular';
+   src: url('assets/fonts/Lexend-Regular.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+/* 
+.roboto-regular {
+   font-family: "Roboto", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-variation-settings: "wdth" 100;
+}
+
+@font-face {
+   font-family: 'RobotoLight';
+   src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
+   font-weight: 100;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'RobotoRegular';
+   src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+} */
+
+@font-face {
+   font-family: 'PoppinsMedium';
+   src: url('assets/fonts/Poppins-Medium.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'PoppinsBold';
+   src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'PoppinsExtraBold';
+   src: url('assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+   font-weight: 800;
+   font-style: normal;
+}
+
+
+/* Universal styles */
+body {
+   font-family: RobotoRegular, Arial, Helvetica;
+   position: relative;
+   background-color: #131313;
+}
+
+
+/* Desktop Navbar Begins Here */
+.navbar {
+   padding-top: 15px;
+   position: fixed;
+   width: 100vw;
+   z-index: 10;
+   background-color: rgba(255, 107, 0, 0.3);
+   -webkit-backdrop-filter: blur(4px);
+   backdrop-filter: blur(4px);
+}
+
+.navigation {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.logo>a>img {
+   background-size: contain;
+   height: 50px;
+   width: 100px;
+   margin: 0px 25px 5px;
+   transition: all 0.2s ease-in-out;
+}
+
+.gear {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 4vw;
+   width: 4vw;
+}
+
+.gear>a>img {
+   height: 80%;
+   width: 80%;
+}
+
+.nav-tab {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+}
+
+
+.gear>img {
+   height: 4vw;
+   width: 4vw;
+}
+
+.nav-btn>a {
+   font-family: sans-serif;
+   font-size: 1.2rem;
+   color: #fff;
+   text-decoration: none;
+   letter-spacing: 2px;
+}
+
+.gear-right {
+   position: relative;
+   left: -40px;
+   width: 14vw;
+   margin-right: 2vw;
+}
+
+#nav-cont {
+   position: relative;
+   left: -50px;
+}
+
+.nav-btn>a>h3 {
+   padding: 0px 10px;
+   width: 16vw;
+   text-align: center;
+}
+
+.nav-btn>a>h3:hover, .mob-tab>a>h3:hover {
+   font-size: 1.2rem;
+   color: #fff0b4;
+   transition: all 0.2s ease-in-out;
+}
+
+.mob-tab>a>h3:hover {
+   font-size: 1.6rem;
+}
+
+.nav-btn>a>h3:active, .mob-tab>a>h3:active {
+   color: #f5c509;
+}
+
+.cross:hover {
+   font-size: 50px;
+   transform: rotate(90deg);
+   transition: all 0.2s ease-in-out;
+}
+
+/* Desktop Navbar Ends Here */
+
+
+
+/* Phone Navbar Begins Here */
+
+.black-overlay {
+   position: fixed;
+   z-index: 15;
+   width: 100vw;
+   height: 100vh;
+   right: 0px;
+   background-color: rgba(0, 0, 0, 0.75);
+   right: -100vw;
+   transition: all 0s ease;
+}
+
+.dim-show {
+   right: 0px;
+}
+
+.nav-hid {
+   position: fixed;
+   z-index: 25;
+   right: 0px;
+   background-color: rgba(255, 107, 0, 0.5);
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
+   width: 60vw;
+   height: 100vh;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   right: -60vw;
+}
+
+.blur {
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
+}
+
+.nav-show {
+   right: 0px;
+   transition: all 0.2s ease;
+}
+
+.nav-hide {
+   right: -60vw;
+   transition: all 0.2s ease;
+}
+
+
+.side-nav {
+   margin: 10px 10px;
+   padding-top: 20px;
+   width: 100%;
+   position: relative;
+}
+
+.tri {
+   width: 100%;
+   height: 50vh;
+   display: flex;
+   align-items: end;
+   position: absolute;
+   z-index: -1;
+   bottom: 0px;
+}
+
+.top {
+   top: 0px;
+   align-items: start;
+}
+
+.top-left-tri {
+   width: 60%;
+   height: 100%;
+   display: flex;
+   clip-path: polygon(0 0, 0 100%, 100% 0);
+   background: linear-gradient(90deg, rgba(255, 143, 63, 0.2), rgba(255, 107, 0, 0.3));
+}
+
+.top-right-tri {
+   width: 40%;
+   height: 60%;
+   clip-path: polygon(0 0, 100% 0, 100% 100%);
+   background: linear-gradient(90deg, rgba(255, 121, 25, 0.1), rgba(255, 150, 3, 0.2));
+}
+
+.left-tri {
+   width: 40%;
+   height: 60%;
+   clip-path: polygon(0 0, 100% 100%, 0 100%);
+   background: linear-gradient(90deg, rgba(255, 143, 63, 0.2), rgba(255, 107, 0, 0.3));
+}
+
+.right-tri {
+   width: 60%;
+   height: 100%;
+   display: flex;
+   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+   background: linear-gradient(90deg, rgba(255, 121, 25, 0.1), rgba(255, 150, 3, 0.2));
+}
+
+.in-tri {
+   width: 60%;
+   height: 40%;
+   bottom: 0px;
+   right: 0px;
+   position: absolute;
+   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+   background: linear-gradient(45deg, rgba(96, 40, 0, 0.1), rgba(244, 152, 23, 0.856));
+}
+
+.top-in-tri {
+   top: 0px;
+   left: 0px;
+   clip-path: polygon(0 0, 0 100%, 100% 0);
+   background: linear-gradient(135deg, rgba(96, 40, 0, 0.1), rgba(244, 152, 23, 0.856));
+
+}
+
+.mob-tab {
+   position: relative;
+   margin: 20px 20px 100px;
+}
+
+.side-nav>div>a>h3 {
+   margin-top: 20px;
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.3rem;
+   letter-spacing: 1px;
+}
+
+.mob-link {
+   text-decoration: none;
+   color: #ffffff;
+}
+
+.cross {
+   text-align: center;
+   font-size: 40px;
+   color: #ffffff;
+   position: relative;
+   /* bottom: -100px; */
+   cursor: pointer;
+}
+
+.mob-gear>img {
+   height: 40px;
+   width: 40px;
+   position: fixed;
+   right: 30px;
+   top: 30px;
+   z-index: 30;
+   display: none;
+}
+
+.gear-rot {
+   transform: rotate(270deg);
+   transition: all 1.5s ease-out;
+}
+
+.anti-rot {
+   transform: rotate(0deg);
+   transition: all 1.5s ease-out;
+}
+
+/* Phone Navbar Ends Here  */
+
+
+
+
+/* BODY OF PAGE BEGINS HERE */
+
+/*SPONSOR PAGE CLASSES*/
+
+/* Orange Banner Starts */
+.banner {
+   background-color: #ff6b00;
+   background-image: url('assets/bg.svg');
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: calc(100vh + 25px);
+   width: 100%;
+}
+
+.banner>div {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   /* max-width: 60vw; */
+}
+
+.title-text {
+   font-size: 9rem;
+   font-family: LexendExtraBold, sans-serif;
+   color: #fff5cf;
+   transition: all 0.1s ease-in-out;
+}
+
+.title-text+div>p {
+   font-family: sans-serif;
+   font-size: 1.3rem;
+   color: #fff5cf;
+   line-height: 2rem;
+   letter-spacing: 1px;
+   font-weight: thin;
+   margin: 20px 20px 0px;
+   width: 60vw;
+}
+
+/* Orange Banner Ends */
+
+
+/* sponsors list Starts */
+.overlay-box {
+   background-color: #fff5cf;
+   width: 100%;
+   border-radius: 25px 25px 0px 0px;
+   position: relative;
+   bottom: 25px;
+}
+
+.body-content {
+   width: 100%;
+   position: relative;
+   padding: 40px 0px 100px;
+   transition: all 0.1s ease-in-out;
+}
+
+.sponsor-type {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 100px 10px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+.spon-title {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.spon-title>h4 {
+   font-size: 2.2rem;
+   font-family: LexendBold, sans-serif;
+   font-weight: 400;
+   margin: 12px;
+   text-align: center;
+}
+
+.spon-title>hr {
+   width: 50%;
+   height: 2px;
+   border: none;
+   background-image: linear-gradient(90deg,
+         #ff9f5a 0%,
+         #ff6b00 100%);
+   border-radius: 10px;
+}
+
+.spon-list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.spon {
+   margin: 20px;
+}
+
+.spon-img {
+   height: 22vw;
+   width: 26vw;
+   min-height: 220px;
+   min-width: 250px;
+   margin-top: 30px;
+   cursor: pointer;
+   border-radius: 12px;
+   background: url('assets/Sponsor.png') no-repeat center;
+   background-size: 200%;
+}
+
+.spon-name {
+   width: 100%;
+   color: #ff6b00;
+   font-weight: 200;
+   font-size: 1.3rem;
+   margin: 5px;
+}
+
+/* sponsors list Ends */
+
+/* SPONSORS PAGE CLASSES ENDS */
+/* LANDING PAGE CLASSES STARTS */
+
+/* Banner Starts */
+/* Banner Ends */
+
+/* Body Starts */
+
+.bg-gear {
+   background-image: url('assets/transp-gear.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   transition: all 0.2s ease-in-out !important;
+}
+
+.article-l {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0px;
+}
+
+.padd {
+   padding: 150px 0px;
+   margin: -30px 0px;
+}
+
+.wide {
+   width: 70vw;
+}
+
+.head-title-l {
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   text-align: left;
+}
+
+.big-title {
+   display: inline-block;
+   font-family: PoppinsExtraBold, sans-serif;
+   font-size: 6rem;
+   line-height: 1;
+   white-space: nowrap;
+   transition: all 0.1s ease-in-out;
+}
+
+.headline-l {
+   margin: 15px 30px 10px;
+   font-size: 1.6rem;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 800;
+   color: #ff6b00;
+   transition: all 0.1s ease-in-out;
+   letter-spacing: 1px;
+}
+
+.hid-des {
+   margin: 20px 0px 5px;
+   display: none;
+}
+
+.down-title {
+   position: relative;
+   top: -10px;
+   display: flex;
+   justify-content: left;
+}
+
+.big-title>span {
+   position: relative;
+}
+
+.title-gear {
+   height: 120px;
+   position: absolute;
+   top: -20px;
+   margin: 0px 15px;
+
+}
+
+.head-des {
+   font-family: Roboto, sans-serif;
+   font-weight: 900;
+   font-size: 1.4rem;
+   letter-spacing: 1px;
+   margin-top: 20px;
+}
+
+.para {
+   font-family: Roboto, sans-serif;
+   font-weight: 500;
+   font-size: 1.3rem;
+   margin: 5px 0px 0px;
+   line-height: 1.5;
+   letter-spacing: 1px;
+}
+
+
+.article-r {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0px;
+}
+
+.head-title-r {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   text-align: right;
+}
+
+.right {
+   text-align: right;
+}
+
+.headline-r {
+   color: #ff6b00;
+   font-size: 1.5rem;
+   letter-spacing: 1px;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 800;
+   margin: 10px 0px 15px;
+}
+
+.event-list {
+   margin: 100px 0px 150px;
+}
+
+.events {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.event {
+   background-color: #ff6b00;
+   border-radius: 15px;
+   display: flex;
+   margin: 15px 0px;
+}
+
+.event-l {
+   flex-direction: row;
+}
+
+.event-r {
+   flex-direction: row-reverse;
+}
+
+.event-text {
+   width: 55%;
+   padding: 25px;
+}
+
+.event-title {
+   font-size: 6rem;
+   line-height: 1;
+   margin: 20px 0px 10px;
+   font-family: PoppinsBold, sans-serif;
+   font-weight: 600;
+}
+
+.event-des {
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.3rem;
+   line-height: 1.3;
+   margin-bottom: 120px;
+}
+
+.event-outline {
+   background-color: #fff5cf;
+   border-radius: 15px;
+   width: 45%;
+}
+
+.event-img-l {
+   background-color: #131313;
+   height: 100%;
+   margin-left: 25px;
+   border-radius: 15px;
+   position: relative;
+}
+
+.event-img-r {
+   background-color: #131313;
+   height: 100%;
+   margin-right: 25px;
+   border-radius: 15px;
+   position: relative;
+}
+
+.event-tag {
+   position: absolute;
+   bottom: 25px;
+   right: 15px;
+   letter-spacing: 8px;
+   font-family: PoppinsExtraBold, sans-serif;
+   color: #ff6b00;
+   font-size: 1.6rem;
+   font-weight: 600;
+}
+
+.tag-r {
+   left: 25px;
+}
+
+
+.merch-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.merches {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.merch {
+   background-color: #ff6b00;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 700px;
+   width: 40%;
+   margin: 60px 0px 120px;
+}
+
+.merch-outline {
+   background-color: #fff5cf;
+   border-radius: 15px;
+   width: 100%;
+   height: 100%;
+   padding-bottom: 25px;
+}
+
+.merch-img {
+   background-color: #131313;
+   height: 100%;
+   margin-bottom: 25px;
+   border-radius: 15px;
+}
+
+.merch-data {
+   padding: 20px;
+}
+
+.merch-name {
+   font-family: PoppinsBold, sans-serif;
+   font-weight: 800;
+   font-size: 3.5rem;
+   line-height: 1;
+}
+
+.merch-avail {
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: #ffffff;
+   letter-spacing: 1px;
+   margin: 5px 0px;
+}
+
+.merch-size {
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.3rem;
+   font-weight: 600;
+   color: #131313;
+   letter-spacing: 1px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 60%;
+   margin: 10px 0px;
+
+}
+
+.avail, .sold {
+   background-color: #ffeee5;
+   width: 26%;
+   border-radius: 5px;
+   margin: 5px 0px;
+   text-align: center;
+   padding: 5px;
+   height: 100%;
+}
+
+.sold {
+   color: rgba(0, 0, 0, 0.5);
+}
+
+.merch-buy {
+   display: flex;
+   flex-direction: row;
+   justify-content: end;
+}
+
+.merch-buy>button {
+   background-color: #fff5cf;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 600;
+   font-size: 1.3rem;
+   border: none;
+   padding: 10px 20px;
+   margin-top: 20px;
+   border-radius: 10px;
+   cursor: pointer;
+   bottom: 0px;
+   right: 0px;
+   border-bottom: 5px solid #a94600cf;
+}
+
+
+/* Body Ends */
+
+
+/* Footer Starts */
+.footer {
+   bottom: 50px;
+   background-color: #131313;
+   padding: 20px;
+}
+
+.foot-content {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items: top;
+   color: #ffffff;
+   font-family: lexendRegular, sans-serif;
+}
+
+.f-logo-box {
+   margin: 90px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+.f-logo-box>div {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items: space-around;
+   padding: 10px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+.foot-gear {
+   background-image: url('assets/gear.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 160px;
+   width: 160px;
+   margin: 30px 0px;
+   transition: all 0.1s ease-in-out;
+
+}
+
+.foot-logo {
+   background-image: url('assets/logo-white.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 150px;
+   height: 120px;
+   margin: 30px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+.logo-des {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   letter-spacing: 1px;
+   font-size: 1.2rem;
+   line-height: 30px;
+
+   transition: all 0.1s ease-in-out;
+}
+
+.foot-text {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   color: #ffffff;
+   margin: 90px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+.foot-text>div {
+   margin: 30px 20px;
+   text-align: center;
+   transition: all 0.1s ease-in-out;
+}
+
+
+.foot-text>div>h4 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   font-size: 2rem;
+   margin: 10px 20px 50px;
+   transition: all 0.1s ease-in-out;
+}
+
+.foot-text>div>p {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 400;
+   letter-spacing: 1px;
+   font-size: 1.45rem;
+   margin: 15px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+.icons {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: center;
+   margin: 20px 5px;
+}
+
+.icon {
+   margin: 0px 20px;
+   cursor: pointer;
+   font-size: 50px;
+   transition: all 0.1s ease-in-out;
+}
+
+.icon>a {
+   color: #ffffff;
+   text-decoration: none;
+}
+
+#insta:hover, #insta:active {
+   background: linear-gradient(45deg, #feda77,
+         #f58529, #dd2a7b, #bc2a8d 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+#linkedin:hover, #linkedin:active {
+   background: linear-gradient(45deg, #004a99,
+         #1cb3ff 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+
+.copyright {
+   color: #ffffff;
+   text-align: center;
+   font-family: RobotoLight, sans-serif;
+   letter-spacing: 1px;
+   font-size: 1.45em;
+   margin: 20px 0px;
+   transition: all 0.1s ease-in-out;
+}
+
+/* Footer Ends */
+
+
+
+/* MEDIA QUERIES */
+
+@media(min-width: 1280px) {
+   .foot-content {
+      flex-wrap: nowrap;
+   }
+
+   .foot-text>div {
+      margin-bottom: 10px;
+   }
+
+   .f-logo-box {
+      margin-left: 60px;
+   }
+}
+
+
+/* Extra Large Devices (Large Screens, TVs) */
+@media (max-width: 1280px) {
+   .f-logo-box, .foot-text {
+      margin: 30px 0px 10px;
+   }
+
+   .wide {
+      width: 75vw;
+   }
+
+   .big-title {
+      font-size: 4.8rem;
+   }
+
+   .headline-l, .headline-r {
+      font-size: 1.4rem;
+   }
+
+   .head-des {
+      font-size: 1.3rem;
+   }
+
+   .para {
+      line-height: 1.35;
+   }
+
+   .event-title {
+      font-size: 4.2rem;
+   }
+
+   .event-des {
+      font-size: 1.25rem;
+      margin-bottom: 80px;
+   }
+
+   .event-list {
+      margin: 60px 0px 100px
+   }
+
+}
+
+
+/* Large Devices (Desktops) till 992px*/
+@media (max-width: 992px) {
+
+   .navbar {
+      background-color: transparent;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: none;
+   }
+
+   .nav-tab {
+      display: none;
+   }
+
+   .mob-gear>img {
+      display: block;
+   }
+
+   .left-tri, .top-right-tri {
+      display: none;
+   }
+
+   .right-tri, .top-left-tri {
+      width: 100%;
+   }
+
+   .title-text {
+      font-size: clamp(3rem, 10vw, 7rem);
+   }
+
+   .sponsor-type {
+      padding-top: 60px;
+   }
+
+   .spon-title>h4 {
+      font-size: 2rem;
+   }
+
+   .logo>a>img {
+      height: 55px;
+      margin: 10px 0px;
+   }
+
+   .foot-gear {
+      margin: 20px 0px;
+      height: 130px;
+   }
+
+   .foot-logo {
+      margin: 20px 0px;
+      height: 120px;
+   }
+
+   .logo-des {
+      font-size: 1.1rem;
+      margin: 0px;
+      padding: 10px 20px !important;
+      width: 100%;
+   }
+
+   .foot-text>div {
+      margin: 20px;
+   }
+
+   .foot-text>div>h4 {
+      margin: 10px 20px 30px;
+   }
+
+   .copyright {
+      font-size: 1.1rem;
+   }
+
+   .wide {
+      width: 80vw;
+   }
+
+   .padd {
+      margin: -20px 0px;
+      padding: 100px 0px;
+   }
+
+   .bg-gear {
+      background-position: top left;
+      background-size: 50%;
+      background-clip: border-box;
+   }
+
+   .big-title {
+      font-size: 4rem;
+   }
+
+   .headline-l, .headline-r {
+      font-size: 1.3rem;
+   }
+
+   .head-des {
+      font-size: 1.2rem;
+   }
+
+   .down-title{
+      top: 5px;
+   }
+
+   .para {
+      font-size: 1.15rem;
+   }
+
+
+   .event-title {
+      font-size: 3.5rem;
+   }
+
+   .event-des {
+      font-size: 1.15rem;
+      margin-bottom: 70px;
+   }
+
+   .event-tag {
+      font-size: 1.4rem;
+   }
+
+   .event-list {
+      margin: 40px 0px 70px;
+   }
+
+
+   .merches {
+      padding: 0px 10px 40px;
+   }
+
+   .merch {
+      width: 45%;
+      margin: 15px 0px 30px;
+      height: 600px;
+   }
+
+   .merch-name {
+      font-size: 2.8rem;
+   }
+
+   .merch-size {
+      width: 70%;
+   }
+
+
+}
+
+/* Medium Devices (Laptops, Small Desktops) */
+@media (max-width: 780px) {
+   .tri {
+      height: 35vh;
+   }
+
+   .body-content {
+      padding: 20px 0px 60px;
+   }
+
+   .spon-title>h4 {
+      font-size: 1.8rem;
+   }
+
+   .sponsor-type {
+      padding-top: 30px;
+   }
+
+   .spon {
+      margin: 20px 20px 5px;
+   }
+
+   .spon-img {
+      margin-top: 5px;
+   }
+
+
+   .f-logo-box, .foot-text {
+      margin: 30px 0px 10px;
+   }
+
+   .foot-gear {
+      margin: 20px 0px;
+      height: 130px;
+   }
+
+   .foot-logo {
+      margin: 20px 0px;
+      height: 120px;
+   }
+
+   .logo-des {
+      font-size: 1.1rem;
+      margin: 0px;
+      padding: 10px 20px !important;
+      width: 100%;
+   }
+
+   .foot-text>div {
+      margin: 20px;
+   }
+
+   .foot-text>div>h4 {
+      margin: 10px 20px 30px;
+   }
+
+   .copyright {
+      font-size: 1.1rem;
+   }
+
+
+   .bg-gear {
+      background-size: 70%;
+   }
+
+   .big-title {
+      font-size: 3.5rem;
+      white-space: wrap;
+   }
+
+   .down-title {
+      top: 0px;
+   }
+
+   .headline-l {
+      display: none;
+   }
+
+   .hid-des, .headline-r {
+      display: block;
+      font-size: 1.3rem;
+   }
+
+   .head-des {
+      font-size: 1.1rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      margin: 10px 0px 5px;
+   }
+
+   .title-gear {
+      display: none;
+   }
+
+   .padd {
+      margin: -20px 0px;
+      padding: 80px 0px 30px;
+   }
+
+   .event-title {
+      font-size: 3rem;
+   }
+
+   .event-des {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+   }
+
+   .event-text {
+      padding: 10px 25px;
+   }
+
+   .event-tag {
+      font-size: 1.3rem;
+   }
+
+   .event-list {
+      margin: 40px 0px 70px;
+   }
+
+   .merches {
+      padding: 0px 10px 15px;
+   }
+
+   .merch {
+      width: 100%;
+      margin: 15px 0px 30px;
+      height: 800px;
+   }
+
+   .merch-img {
+      width: 100%;
+   }
+
+   .merch-name {
+      font-size: 4rem;
+   }
+
+   .merch-size {
+      width: 70%;
+      margin-bottom: 40px;
+   }
+
+}
+
+
+/* Small Devices (Tablets, Large Phones) */
+@media (max-width: 576px) {
+   .spon-title>h4 {
+      font-size: 1.6rem;
+   }
+
+   .f-logo-box, .foot-text {
+      margin: 30px 0px 10px;
+   }
+
+   .foot-gear {
+      width: 100%;
+      margin: 20px 0px;
+      height: 130px;
+   }
+
+   .foot-logo {
+      width: 100%;
+      margin: 20px 0px;
+      height: 120px;
+   }
+
+   .logo-des {
+      font-size: 1rem;
+      margin: 0px;
+      padding: 10px 20px !important;
+      width: 100%;
+   }
+
+   .foot-text>div {
+      margin: 20px;
+   }
+
+   .foot-text>div>h4 {
+      font-size: 1.8rem;
+      margin: 10px 20px 30px;
+   }
+
+
+   .icon {
+      font-size: 40px
+   }
+
+   .copyright {
+      font-size: 0.9rem;
+   }
+
+
+
+   .wide {
+      width: 88vw;
+   }
+
+   .padd {
+      margin: 0px 0px;
+      padding: 80px 0px 30px;
+   }
+
+   .big-title {
+      font-size: 2.3rem;
+   }
+
+   .para {
+      font-size: 1rem;
+      font-weight: 400;
+   }
+
+   .head-des {
+      margin-bottom: 8px;
+   }
+
+   .event-list {
+      margin: 30px 30px;
+   }
+
+   .event {
+      margin: 10px 0px 50px;
+   }
+
+   .event-l {
+      flex-direction: column-reverse;
+   }
+
+   .event-r {
+      flex-direction: column-reverse;
+   }
+
+   .event-text {
+      padding: 10px 25px;
+      width: 100%;
+      height: 80vw;
+   }
+
+   .event-title {
+      font-size: 3rem;
+   }
+
+   .event-des {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+   }
+
+   .event-outline {
+      width: 100%;
+      height: 55%;
+   }
+
+   .event-img-l, .event-img-r {
+      width: 100%;
+      height: 90vw;
+      margin: 0px 0px 20px;
+      transition: all 0s ease-in-out;
+   }
+
+   .merches {
+      padding: 0px 10px 15px;
+   }
+
+   .merch {
+      width: 100%;
+      margin: 15px 0px 30px;
+      height: 600px;
+   }
+
+   .merch-outline {
+      padding-bottom: 20px;
+   }
+
+   .merch-name {
+      font-size: 2.8rem;
+   }
+
+   .merch-size {
+      width: 75%;
+      margin-bottom: 5px;
+   }
+
+   .avail, .sold {
+      font-size: 1.2rem;
+   }
+
+   .merch-buy>button {
+      font-size: 1.1rem;
+   }
+
+}
