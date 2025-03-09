@@ -11,6 +11,7 @@
 }
 .Event-container {
     overflow: hidden;
+    display: flex;
 }
 .hash-001 {
     position: absolute;

@@ -18,7 +18,7 @@ const eventsData = [
   },
   {
     text: "Another amazing event happening soon!",
-    image: "https://via.placeholder.com/400",
+    image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
     no: "#002",
   },
   {
@@ -29,7 +29,7 @@ const eventsData = [
   },
   {
     text: "Final event details here, be ready!",
-    image: "https://via.placeholder.com/400",
+    image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
     no: "#004",
   },
 ];
@@ -37,14 +37,7 @@ const eventsData = [
 const EventCard = ({ currentEvent }) => {
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        key={currentEvent}
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -50 }}
-        transition={{ duration: 0.5 }}
-        className="Event-container flex justify-center gap-6 py-10 bg-yellow-100"
-      >
+      <div className="Event-container  flex justify-center gap-6 py-10 bg-yellow-100">
         <div className="rectangle bg-gray-700 text-white p-6 max-w-md">
           <p className="event-description">{eventsData[currentEvent].text}</p>
           <p className="event">@event</p>
@@ -52,12 +45,21 @@ const EventCard = ({ currentEvent }) => {
           <div className="arrow" />
         </div>
 
+      <motion.div
+        key={currentEvent}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.5 }}
+        className=""
+      >
         <img
           src={eventsData[currentEvent].image}
           alt="Event"
           className="image object-cover"
         />
       </motion.div>
+      </div>
     </AnimatePresence>
   );
 };

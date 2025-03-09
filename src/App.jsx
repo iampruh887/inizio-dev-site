@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Events from "./components/Events/Events";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 import TeamPic from "./components_team/TeamPic";
 import Body from "./components_team/Body";
 import Footer from "./components_team/Footer";
 import Team from "./assets_team/skull.png";
 import Background from "./components_team/Background"; // Import the Background component
-import Home from "./components/Home";
+
 function App() {
   return (
     <Router>

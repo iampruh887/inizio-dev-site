@@ -1,5 +1,5 @@
 import "./style.css";
-
+import Footer from "../components_team/Footer";
 function Home() {
   return (
     <>
@@ -248,7 +248,7 @@ function Home() {
           </div>
         </section>
       </main>
-      <footer>
+      {/* <footer>
         <div className="footer overlay-box">
           <div className="foot-content">
             <div className="f-logo-box">
@@ -300,7 +300,8 @@ function Home() {
             <p>MADE IN PANIC BY ECELL TECHNICAL TEAM (2025)</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
+      <Footer />
     </>
   );
 }
