@@ -1,5 +1,5 @@
 {
-  "name": "my-react-app",
+  "name": "combined-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,12 +11,16 @@
     "start": "serve -s dist -l $PORT"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.9",
     "framer-motion": "^12.4.10",
+    "lucide-react": "^0.477.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "tailwindcss": "^3.x"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -29,7 +33,6 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "postcss": "^8.x",
-    "tailwindcss": "^3.x",
     "vite": "^6.2.0"
   }
 }

@@ -9,7 +9,7 @@
     --text-light: #ffffff;
     --text-dark: #333333;
 }
-.Event-container{
+.Event-container {
     overflow: hidden;
 }
 .hash-001 {
@@ -24,25 +24,26 @@
     font-weight: 400;
     line-height: 48px;
     text-align: right;
-  }
-  .arrow {
+}
+.arrow {
     position: absolute;
     width: 19.524px;
     height: 19.524px;
     top: 614px;
     left: 202px;
-    background: url(https://static.codia.ai/image/2025-03-03/5188bbb9-05d7-464d-bf63-4439be6a06da.svg) no-repeat center;
+    background: url(https://static.codia.ai/image/2025-03-03/5188bbb9-05d7-464d-bf63-4439be6a06da.svg)
+        no-repeat center;
     background-size: cover;
-  }
-  .image {
+}
+.image {
     flex-shrink: 0;
     position: relative;
     width: 810px;
     height: 680px;
     background-size: cover;
     border-radius: 22px;
-  }
-  .rectangle {
+}
+.rectangle {
     flex-shrink: 0;
     position: relative;
     width: 449px;
@@ -50,8 +51,8 @@
     font-size: 0px;
     background: rgba(0, 0, 0, 0.71);
     border-radius: 25px;
-  }
-  .event-description {
+}
+.event-description {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -66,8 +67,8 @@
     line-height: 34px;
     text-align: left;
     text-transform: uppercase;
-  }
-  .event {
+}
+.event {
     position: absolute;
     width: 202px;
     height: 69px;
@@ -80,8 +81,8 @@
     line-height: 69px;
     text-align: center;
     white-space: nowrap;
-  }
-  .event-button{
+}
+.event-button {
     color: #000000;
     text-align: center;
     font-family: "Inter-Regular", sans-serif;
@@ -96,29 +97,34 @@
     border: 2px solid #555555;
 }
 
-  .event-tab{
+.event-tab {
     background-color: #fef9c3;
     border-radius: 22px;
-  }
+    margin-top: 100px; /* Add margin to push content down */
+    position: relative;
+    z-index: 20;
+}
 
-  @media (max-width: 768px){
-    .Event-container{
+@media (max-width: 768px) {
+    .Event-container {
         display: block;
     }
-    
-  .rectangle {
-    width: auto;
-    height: auto;
-    margin: 20px;
-  }
-  .event-description,.event,.hash-001{
-    height: auto;
-    width: auto;
-    /* position: relative; */
-  }
-  .image{
-    margin: 20px;
-    width: 410px;
-    height: 380px;
-  }
-  }
+
+    .rectangle {
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
+    .event-description,
+    .event,
+    .hash-001 {
+        height: auto;
+        width: auto;
+        /* position: relative; */
+    }
+    .image {
+        margin: 20px;
+        width: 410px;
+        height: 380px;
+    }
+}

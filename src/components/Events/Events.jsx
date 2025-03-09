@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Footer from "../Footer";
+import Footer from "../../components_team/Footer";
 import Hero from "../Hero";
 import Navbar from "../Navbar";
-import './Events.css';
+import "./Events.css";
 
 const events_hero_title = "Events";
-const events_hero_desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+const events_hero_desc =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
 
 const eventsData = [
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+    image:
+      "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
     no: "#001",
   },
   {
@@ -21,7 +23,8 @@ const eventsData = [
   },
   {
     text: "Don't miss this exclusive session!",
-    image: "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+    image:
+      "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
     no: "#003",
   },
   {
@@ -74,15 +77,14 @@ const EventNavigation = ({ setCurrentEvent }) => {
   );
 };
 
-const Event = ({currentEvent,setCurrentEvent})=>{
-  return(
-  <div className="event-tab">
-    <EventCard currentEvent={currentEvent} />
-    <EventNavigation setCurrentEvent={setCurrentEvent} />
-  </div>
+const Event = ({ currentEvent, setCurrentEvent }) => {
+  return (
+    <div className="event-tab">
+      <EventCard currentEvent={currentEvent} />
+      <EventNavigation setCurrentEvent={setCurrentEvent} />
+    </div>
   );
 };
-
 
 const App = () => {
   const [currentEvent, setCurrentEvent] = useState(0);
@@ -95,11 +97,14 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      {/* <Navbar /> */}
+    <div className="relative">
       <Hero title={events_hero_title} desc={events_hero_desc} />
-      <Event currentEvent={currentEvent} setCurrentEvent={setCurrentEvent}/>
-      <Footer />
+      <div className="relative z-20 mt-[-100px]">
+        {" "}
+        {/* Added container with negative margin */}
+        <Event currentEvent={currentEvent} setCurrentEvent={setCurrentEvent} />
+        <Footer />
+      </div>
     </div>
   );
 };

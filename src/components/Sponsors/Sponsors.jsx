@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer";
+import Footer from "../../components_team/Footer";
 import SponsorSection from "./SponsorSection";
 import { SPONSOR_TYPES } from "../../constants/sponsorData";
 import "./Sponsors.css";
@@ -8,19 +8,16 @@ import Hero from "../Hero";
 
 const Sponsors = () => {
   return (
-    <div className="sponsors">
-      <Navbar />
-      <Hero
-        title="Sponsors"
-        desc="flashkjdfhkdslajhfkladsjhfkjladshfkjladshfkjsadlhfjsklad flksjahdfjksadh fkjadslhfklasdhflk."
-      />
-
-      <main className="sponsors__content">
-        {Object.values(SPONSOR_TYPES).map(({ title, sponsors }) => (
-          <SponsorSection key={title} title={title} sponsors={sponsors} />
-        ))}
-      </main>
-      <Footer />
+    <div className="relative">
+      <Hero title="Sponsors" desc="..." />
+      <div className="relative z-20 mt-[-100px]">
+        <main className="sponsors__content">
+          {Object.values(SPONSOR_TYPES).map(({ title, sponsors }) => (
+            <SponsorSection key={title} title={title} sponsors={sponsors} />
+          ))}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
