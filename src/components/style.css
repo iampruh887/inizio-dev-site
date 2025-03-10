@@ -1505,3 +1505,61 @@ body {
 .tag-r {
     left: 25px;
 }
+.event01 {
+    width: 50px;
+}
+.merch-img {
+    background-color: #131313;
+    height: 100%;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.merch-img:hover {
+    transform: scale(1.02);
+}
+
+.merch-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother easing */
+    transform-style: preserve-3d;
+    cursor: pointer;
+    margin-bottom: 25px;
+    perspective: 1000px; /* Adds better 3D effect */
+}
+
+.merch-img-container.flipped {
+    transform: rotateY(180deg);
+}
+
+.merch-img-front,
+.merch-img-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    background-color: #131313;
+    background-size: cover;
+    background-position: center;
+    -webkit-backface-visibility: hidden; /* For Safari */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.merch-img-back {
+    transform: rotateY(180deg);
+}
+
+/* Optional: Add hover effect */
+.merch-img-container:hover {
+    transform: rotateY(5deg) scale(1.02);
+}
+
+.merch-img-container.flipped:hover {
+    transform: rotateY(175deg) scale(1.02);
+}

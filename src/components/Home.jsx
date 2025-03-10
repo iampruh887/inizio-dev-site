@@ -1,6 +1,33 @@
 import "./style.css";
 import Footer from "../components_team/Footer";
+import EventCard from "./Events/EventCard";
+import React, { useState } from "react";
+import m1_front from "../assets/m1_front.jpeg";
+import m2_front from "../assets/m2_front.jpeg";
+import m1_back from "../assets/m1_back.jpeg";
+import m2_back from "../assets/m2_back.jpeg";
 function Home() {
+  const [merchImages, setMerchImages] = useState([
+    {
+      frontImage: m1_front,
+      backImage: m1_back,
+      isFlipped: false,
+    },
+    {
+      frontImage: m2_front,
+      backImage: m2_back,
+      isFlipped: false,
+    },
+  ]);
+
+  // Add this handler function
+  const handleImageFlip = (index) => {
+    setMerchImages(
+      merchImages.map((merch, i) =>
+        i === index ? { ...merch, isFlipped: !merch.isFlipped } : merch,
+      ),
+    );
+  };
   return (
     <>
       <meta charSet="UTF-8" />
@@ -116,63 +143,46 @@ function Home() {
                   </div>
                 </div>
               </div>
-
+              <div
+                className="mt-16"
+                style={{ maxWidth: "900px", margin: "0 auto", marginTop: 120 }}
+              >
+                <EventCard
+                  title="Event 01"
+                  description="Where ideas collide and opportunities emerge!"
+                />
+                <EventCard
+                  title="Event 02"
+                  description="Where ideas collide and opportunities emerge!"
+                  reversed={true}
+                />
+              </div>
               <div className="merch-container">
                 <div className="wide">
                   <div className="merches">
-                    <div className="merch">
-                      <div className="merch-outline">
-                        <div className="merch-img"></div>
-                      </div>
-                      <div className="merch-data">
-                        <div className="merch-name">Merch 01</div>
-                        <div className="merch-avail">Size Available:</div>
-                        <div className="merch-size">
-                          <p className="sold">XS</p>
-                          <p className="avail">S</p>
-                          <p className="avail">M</p>
-                          <p className="avail">L</p>
-                          <p className="avail">XL</p>
-                          <p className="avail">XXL</p>
-                        </div>
-                        <div className="merch-buy">
-                          <button>I WANT IT NOW!</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="merch">
-                      <div className="merch-outline">
-                        <div className="merch-img"></div>
-                      </div>
-                      <div className="merch-data">
-                        <div className="merch-name">Merch 02</div>
-                        <div className="merch-avail">Size Available:</div>
-                        <div className="merch-size">
-                          <p className="sold">XS</p>
-                          <p className="avail">S</p>
-                          <p className="avail">M</p>
-                          <p className="avail">L</p>
-                          <p className="avail">XL</p>
-                          <p className="avail">XXL</p>
-                        </div>
-                        <div className="merch-buy">
-                          <button>I WANT IT NOW!</button>
-                        </div>
-                      </div>
-                    </div>
-                    {/* <div
-                      style={{
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div className="merch">
+                    {merchImages.map((merch, index) => (
+                      <div className="merch" key={index}>
                         <div className="merch-outline">
-                          <div className="merch-img"></div>
+                          <div
+                            className={`merch-img-container ${merch.isFlipped ? "flipped" : ""}`}
+                            onClick={() => handleImageFlip(index)}
+                          >
+                            <div
+                              className="merch-img-front"
+                              style={{
+                                backgroundImage: `url(${merch.frontImage})`,
+                              }}
+                            />
+                            <div
+                              className="merch-img-back"
+                              style={{
+                                backgroundImage: `url(${merch.backImage})`,
+                              }}
+                            />
+                          </div>
                         </div>
                         <div className="merch-data">
-                          <div className="merch-name">Merch 03</div>
+                          <div className="merch-name">Merch {index + 1}</div>
                           <div className="merch-avail">Size Available:</div>
                           <div className="merch-size">
                             <p className="sold">XS</p>
@@ -187,32 +197,7 @@ function Home() {
                           </div>
                         </div>
                       </div>
-                    </div> */}
-                    {/* <div class="merch">
-                     <div class="merch-outline">
-                        <div class="merch-img">
-                        </div>
-                     </div>
-                     <div class="merch-data">
-                        <div class="merch-name">
-                           Merch 04
-                        </div>
-                        <div class="merch-avail">
-                           Size Available:
-                        </div>
-                        <div class="merch-size">
-                           <p class="sold">XS</p>
-                           <p class="avail">S</p>
-                           <p class="avail">M</p>
-                           <p class="avail">L</p>
-                           <p class="avail">XL</p>
-                           <p class="avail">XXL</p>
-                        </div>
-                        <div class="merch-buy">
-                           <button>I WANT IT NOW!</button>
-                        </div>
-                     </div>
-                  </div> */}
+                    ))}
                   </div>
                 </div>
               </div>
