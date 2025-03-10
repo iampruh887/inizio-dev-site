@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    transition: all 0.15s ease-in-out;
-    /* box-sizing: border-box; */
-}
+
 
 @font-face {
     font-family: "Roboto";
@@ -88,11 +80,11 @@
 }
 
 /* Universal styles */
-body {
+/* body {
     font-family: RobotoRegular, Arial, Helvetica;
     position: relative;
     background-color: #131313;
-}
+} */
 
 /* BODY OF PAGE BEGINS HERE */
 
@@ -530,15 +522,15 @@ body {
 
 /* Large Devices (Desktops) till 992px*/
 @media (max-width: 992px) {
-    .navbar {
+    /* .navbar {
         background-color: transparent;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: none;
-    }
+    } */
 
-    .nav-tab {
+    /* .nav-tab {
         display: none;
-    }
+    } */
 
     .mob-gear > img {
         display: block;
@@ -654,10 +646,6 @@ body {
 @media (max-width: 780px) {
     .tri {
         height: 35vh;
-    }
-
-    .body-content {
-        padding: 20px 0px 60px;
     }
 
     .spon-title > h4 {
