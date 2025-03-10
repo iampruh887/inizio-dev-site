@@ -6,6 +6,8 @@ import m1_front from "../assets/m1_front.jpeg";
 import m2_front from "../assets/m2_front.jpeg";
 import m1_back from "../assets/m1_back.jpeg";
 import m2_back from "../assets/m2_back.jpeg";
+import InsightArena from "../components/InsightArena";
+import Navbar from "./Navbar";
 function Home() {
   const [merchImages, setMerchImages] = useState([
     {
@@ -16,6 +18,11 @@ function Home() {
     {
       frontImage: m2_front,
       backImage: m2_back,
+      isFlipped: false,
+    },
+    {
+      frontImage: m1_front,
+      backImage: m1_back,
       isFlipped: false,
     },
   ]);
@@ -157,6 +164,38 @@ function Home() {
                   reversed={true}
                 />
               </div>
+
+              <div className="article-l">
+                <div className="wide">
+                  <div>
+                    <div className="head-title-l">
+                      <h3 className="big-title">brand forge:</h3>
+                      <span className="headline-l">
+                        EXCLUSIVE GEAR TO WEAR YOUR AMBITION!
+                      </span>
+                    </div>
+                    <div className="head-title-l down-title">
+                      <h3 className="big-title">the identity hub</h3>
+                    </div>
+                    <div className="headline-l hid-des">
+                      EXCLUSIVE GEAR TO WEAR YOUR AMBITION!
+                    </div>
+                  </div>
+                  <div className="text-cont">
+                    <div className="head-des">
+                      CRAFT YOUR LEGACY WITH EXCLUSIVE INIZIO MERCH!
+                    </div>
+                    <div className="para">
+                      <p>
+                        From statement tees to sleek accessories, Brand Forge is
+                        where style meets innovation. Wear your ambition,
+                        represent the spirit of entrepreneurship, and take home
+                        a piece of the summit!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="merch-container">
                 <div className="wide">
                   <div className="merches">
@@ -201,91 +240,13 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="article-r">
-                <div className="wide">
-                  <div>
-                    <div className="head-title-r">
-                      <h3 className="big-title">insight arena:</h3>
-                    </div>
-                    <div className="head-title-r down-title">
-                      <h3 className="big-title">
-                        where visionaries
-                        <br /> take the stage
-                      </h3>
-                    </div>
-                  </div>
-                  <div className="text-cont right">
-                    <div className="headline-r">
-                      SPEAKER EXPRESS – INSIGHTS FROM THE BEST IN THE GAME!
-                    </div>
-                    <div className="para">
-                      <p>
-                        Fast-track your learning with industry giants, startup
-                        founders, and thought leaders. This isn’t just another
-                        talk—it’s a masterclass on the future. Buckle up and get
-                        ready to be inspired!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+              <InsightArena />
             </div>
           </div>
         </section>
       </main>
-      {/* <footer>
-        <div className="footer overlay-box">
-          <div className="foot-content">
-            <div className="f-logo-box">
-              <div>
-                <div className="foot-gear" />
-                <div className="foot-logo" />
-              </div>
-              <div className="logo-des">
-                THE MOST INNOVATIVE ENTREPRENEURSHIP
-                <br />
-                SUMMIT OF INDIA
-              </div>
-            </div>
-            <div className="foot-text">
-              <div id="address">
-                <h4>ADDRESS</h4>
-                <p>E-CELL, IIIT GUWAHATI</p>
-                <p>ASSAM 781015</p>
-              </div>
-              <div id="contact">
-                <h4>EMAIL</h4>
-                <p>ecell@iiitg.ac.in</p>
-              </div>
-              <div id="follow">
-                <h4>FOLLOW US</h4>
-                <div className="icons">
-                  <div className="icon">
-                    <a
-                      id="insta"
-                      href="https://www.instagram.com/inizio.iiitguwahati?utm_source=qr&igsh=MWhwaGM1dTVjazd6aA=="
-                      target="_blank"
-                    >
-                      <i className="fa-brands fa-instagram" />
-                    </a>
-                  </div>
-                  <div id="linkedin" className="icon">
-                    <a
-                      href="https://www.linkedin.com/company/e-cell-iiit-guwahati/?originalSubdomain=in"
-                      target="_blank"
-                    >
-                      <i className="fa-brands fa-linkedin" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="copyright">
-            <p>MADE IN PANIC BY ECELL TECHNICAL TEAM (2025)</p>
-          </div>
-        </div>
-      </footer> */}
+
       <Footer />
     </>
   );

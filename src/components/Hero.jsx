@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Hero.css";
-import Img from "../assets/background.jpg";
+import Img from "../assets_team/vector-background.svg";
 
 const Hero = ({ title, desc }) => {
   return (
