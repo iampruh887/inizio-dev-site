@@ -8,11 +8,18 @@ import "./css/Nav.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(true); // State for text color
+  const [isDark, setIsDark] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
+      const currentScrollPos = window.scrollY;
+      const isScrolled = currentScrollPos > 10;
+
+      // Set visibility based on scroll direction
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
 
       // Get the background color at the current scroll position
       const elementAtPoint = document.elementFromPoint(100, 10);
@@ -43,11 +50,13 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrolled]);
+  }, [prevScrollPos, scrolled]);
 
   return (
     <nav
-      className={`navbar-container ${scrolled ? "scrolled" : ""} ${isDark ? "dark-bg" : "light-bg"}`}
+      className={`navbar-container ${scrolled ? "scrolled" : ""} ${
+        isDark ? "dark-bg" : "light-bg"
+      } ${visible ? "" : "navbar-hidden"}`}
     >
       <div className="navbar-content">
         {/* Logo */}

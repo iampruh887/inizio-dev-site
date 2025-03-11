@@ -19,7 +19,7 @@ export default function Body() {
       instaUrl: "instagram.com",
       linkedinUrl: "linkedin.com",
       phone: "1234567890",
-      image: skull
+      image: skull,
     },
     {
       name: "john doe",
@@ -27,9 +27,42 @@ export default function Body() {
       instaUrl: "instagram.com/john",
       linkedinUrl: "linkedin.com/in/john",
       phone: "2345678901",
-      image: skull
-    }
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
   ];
+
 
     const techTeamMembers = [
         { name: "Alok Vishwakarma", designation: "Team Member", instaUrl: "", linkedinUrl: "", phone: "", image: memberImages["tech (7).jpg"] },
@@ -96,9 +129,7 @@ export default function Body() {
       />
     ));
 
-
-
-    // ------------------Maybe Dont Change after this-------------------- //
+  // ------------------Maybe Dont Change after this-------------------- //
   return (
     <div className="bg-[#FFF5Cf] w-full sm:w-[85%] sm:rounded-tr-3xl sm:rounded-br-3xl p-8 mb-[100px]">
       {/* Core Team */}

@@ -40,7 +40,7 @@ const EventCard = ({ currentEvent }) => {
       <div className="Event-container  flex justify-center gap-6 py-10 bg-yellow-100">
         <div className="rectangle bg-gray-700 text-white p-6 max-w-md">
           <p className="event-description">{eventsData[currentEvent].text}</p>
-          <p className="event">@event</p>
+          <p className="Event_event">@event</p>
           <span className="hash-001">{eventsData[currentEvent].no}</span>
           <div className="arrow" />
         </div>
