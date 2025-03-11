@@ -1,20 +1,53 @@
 import "./style.css";
+import React, { useState } from "react";
 import Footer from "../components_team/Footer";
+import EventCard from "./Events/EventCard";
+import m1_front from "../assets/m1_front.jpeg";
+import m2_front from "../assets/m2_front.jpeg";
+import m1_back from "../assets/m1_back.jpeg";
+import m2_back from "../assets/m2_back.jpeg";
+import InsightArena from "../components/InsightArena";
+import Navbar from "./Navbar";
 function Home() {
+  const [merchImages, setMerchImages] = useState([
+    {
+      frontImage: m1_front,
+      backImage: m1_back,
+      isFlipped: false,
+    },
+    {
+      frontImage: m2_front,
+      backImage: m2_back,
+      isFlipped: false,
+    },
+    {
+      frontImage: m1_front,
+      backImage: m1_back,
+      isFlipped: false,
+    },
+  ]);
+
+  // Add this handler function
+  const handleImageFlip = (index) => {
+    setMerchImages(
+      merchImages.map((merch, i) =>
+        i === index ? { ...merch, isFlipped: !merch.isFlipped } : merch,
+      ),
+    );
+  };
   return (
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>INIZIO - 25</title>
       <link rel="stylesheet" href="style.css" />
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
-      />
-      <main>
+      /> */}
         <section>
           <div className="banner">
             <div>
@@ -25,7 +58,7 @@ function Home() {
         </section>
         <section>
           <div className="overlay-box">
-            <div className="body-content">
+            <div className="body-csntent">
               <div className="bg-gear">
                 <div className="article-l padd">
                   <div className="wide">
@@ -116,63 +149,78 @@ function Home() {
                   </div>
                 </div>
               </div>
+              <div
+                className="mt-16"
+                style={{ maxWidth: "900px", margin: "0 auto", marginTop: 120 }}
+              >
+                <EventCard
+                  title="Event 01"
+                  description="Where ideas collide and opportunities emerge!"
+                />
+                <EventCard
+                  title="Event 02"
+                  description="Where ideas collide and opportunities emerge!"
+                  reversed={true}
+                />
+              </div>
 
+              <div className="article-l">
+                <div className="wide">
+                  <div>
+                    <div className="head-title-l">
+                      <h3 className="big-title">brand forge:</h3>
+                      <span className="headline-l">
+                        EXCLUSIVE GEAR TO WEAR YOUR AMBITION!
+                      </span>
+                    </div>
+                    <div className="head-title-l down-title">
+                      <h3 className="big-title">the identity hub</h3>
+                    </div>
+                    <div className="headline-l hid-des">
+                      EXCLUSIVE GEAR TO WEAR YOUR AMBITION!
+                    </div>
+                  </div>
+                  <div className="text-cont">
+                    <div className="head-des">
+                      CRAFT YOUR LEGACY WITH EXCLUSIVE INIZIO MERCH!
+                    </div>
+                    <div className="para">
+                      <p>
+                        From statement tees to sleek accessories, Brand Forge is
+                        where style meets innovation. Wear your ambition,
+                        represent the spirit of entrepreneurship, and take home
+                        a piece of the summit!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="merch-container">
                 <div className="wide">
                   <div className="merches">
-                    <div className="merch">
-                      <div className="merch-outline">
-                        <div className="merch-img"></div>
-                      </div>
-                      <div className="merch-data">
-                        <div className="merch-name">Merch 01</div>
-                        <div className="merch-avail">Size Available:</div>
-                        <div className="merch-size">
-                          <p className="sold">XS</p>
-                          <p className="avail">S</p>
-                          <p className="avail">M</p>
-                          <p className="avail">L</p>
-                          <p className="avail">XL</p>
-                          <p className="avail">XXL</p>
-                        </div>
-                        <div className="merch-buy">
-                          <button>I WANT IT NOW!</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="merch">
-                      <div className="merch-outline">
-                        <div className="merch-img"></div>
-                      </div>
-                      <div className="merch-data">
-                        <div className="merch-name">Merch 02</div>
-                        <div className="merch-avail">Size Available:</div>
-                        <div className="merch-size">
-                          <p className="sold">XS</p>
-                          <p className="avail">S</p>
-                          <p className="avail">M</p>
-                          <p className="avail">L</p>
-                          <p className="avail">XL</p>
-                          <p className="avail">XXL</p>
-                        </div>
-                        <div className="merch-buy">
-                          <button>I WANT IT NOW!</button>
-                        </div>
-                      </div>
-                    </div>
-                    {/* <div
-                      style={{
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div className="merch">
+                    {merchImages.map((merch, index) => (
+                      <div className="merch" key={index}>
                         <div className="merch-outline">
-                          <div className="merch-img"></div>
+                          <div
+                            className={`merch-img-container ${merch.isFlipped ? "flipped" : ""}`}
+                            onClick={() => handleImageFlip(index)}
+                          >
+                            <div
+                              className="merch-img-front"
+                              style={{
+                                backgroundImage: `url(${merch.frontImage})`,
+                              }}
+                            />
+                            <div
+                              className="merch-img-back"
+                              style={{
+                                backgroundImage: `url(${merch.backImage})`,
+                              }}
+                            />
+                          </div>
                         </div>
                         <div className="merch-data">
-                          <div className="merch-name">Merch 03</div>
+                          <div className="merch-name">Merch {index + 1}</div>
                           <div className="merch-avail">Size Available:</div>
                           <div className="merch-size">
                             <p className="sold">XS</p>
@@ -187,120 +235,15 @@ function Home() {
                           </div>
                         </div>
                       </div>
-                    </div> */}
-                    {/* <div class="merch">
-                     <div class="merch-outline">
-                        <div class="merch-img">
-                        </div>
-                     </div>
-                     <div class="merch-data">
-                        <div class="merch-name">
-                           Merch 04
-                        </div>
-                        <div class="merch-avail">
-                           Size Available:
-                        </div>
-                        <div class="merch-size">
-                           <p class="sold">XS</p>
-                           <p class="avail">S</p>
-                           <p class="avail">M</p>
-                           <p class="avail">L</p>
-                           <p class="avail">XL</p>
-                           <p class="avail">XXL</p>
-                        </div>
-                        <div class="merch-buy">
-                           <button>I WANT IT NOW!</button>
-                        </div>
-                     </div>
-                  </div> */}
+                    ))}
                   </div>
                 </div>
               </div>
-              <div className="article-r">
-                <div className="wide">
-                  <div>
-                    <div className="head-title-r">
-                      <h3 className="big-title">insight arena:</h3>
-                    </div>
-                    <div className="head-title-r down-title">
-                      <h3 className="big-title">
-                        where visionaries
-                        <br /> take the stage
-                      </h3>
-                    </div>
-                  </div>
-                  <div className="text-cont right">
-                    <div className="headline-r">
-                      SPEAKER EXPRESS – INSIGHTS FROM THE BEST IN THE GAME!
-                    </div>
-                    <div className="para">
-                      <p>
-                        Fast-track your learning with industry giants, startup
-                        founders, and thought leaders. This isn’t just another
-                        talk—it’s a masterclass on the future. Buckle up and get
-                        ready to be inspired!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+              <InsightArena />
             </div>
           </div>
         </section>
-      </main>
-      {/* <footer>
-        <div className="footer overlay-box">
-          <div className="foot-content">
-            <div className="f-logo-box">
-              <div>
-                <div className="foot-gear" />
-                <div className="foot-logo" />
-              </div>
-              <div className="logo-des">
-                THE MOST INNOVATIVE ENTREPRENEURSHIP
-                <br />
-                SUMMIT OF INDIA
-              </div>
-            </div>
-            <div className="foot-text">
-              <div id="address">
-                <h4>ADDRESS</h4>
-                <p>E-CELL, IIIT GUWAHATI</p>
-                <p>ASSAM 781015</p>
-              </div>
-              <div id="contact">
-                <h4>EMAIL</h4>
-                <p>ecell@iiitg.ac.in</p>
-              </div>
-              <div id="follow">
-                <h4>FOLLOW US</h4>
-                <div className="icons">
-                  <div className="icon">
-                    <a
-                      id="insta"
-                      href="https://www.instagram.com/inizio.iiitguwahati?utm_source=qr&igsh=MWhwaGM1dTVjazd6aA=="
-                      target="_blank"
-                    >
-                      <i className="fa-brands fa-instagram" />
-                    </a>
-                  </div>
-                  <div id="linkedin" className="icon">
-                    <a
-                      href="https://www.linkedin.com/company/e-cell-iiit-guwahati/?originalSubdomain=in"
-                      target="_blank"
-                    >
-                      <i className="fa-brands fa-linkedin" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="copyright">
-            <p>MADE IN PANIC BY ECELL TECHNICAL TEAM (2025)</p>
-          </div>
-        </div>
-      </footer> */}
       <Footer />
     </>
   );

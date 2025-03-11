@@ -16,23 +16,24 @@ function App() {
       <div className="overflow-hidden">
         {" "}
         {/* Add this wrapper */}
+          <Background>
+          <Navbar />
         <Routes>
           <Route
             path="/Teams"
             element={
-              <Background>
-                <Navbar />
+              <>
                 <TeamPic imageUrl={Team} />
                 <Body />
                 <Footer />
-              </Background>
-            }
-          />
+              </>
+              }
+              />
           <Route
             path="/*"
             element={
               <>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Routes>
                   <Route path="/" element={<Home />} />
                   {/* <Route path="/" element={<Navigate to="home.html" />} /> */}
@@ -42,8 +43,9 @@ function App() {
                 </Routes>
               </>
             }
-          />
+            />
         </Routes>
+            </Background>
       </div>
     </Router>
   );

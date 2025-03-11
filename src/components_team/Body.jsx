@@ -12,7 +12,7 @@ export default function Body() {
       instaUrl: "instagram.com",
       linkedinUrl: "linkedin.com",
       phone: "1234567890",
-      image: skull
+      image: skull,
     },
     {
       name: "john doe",
@@ -20,8 +20,40 @@ export default function Body() {
       instaUrl: "instagram.com/john",
       linkedinUrl: "linkedin.com/in/john",
       phone: "2345678901",
-      image: skull
-    }
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
+    {
+      name: "john doe",
+      designation: "developer",
+      instaUrl: "instagram.com/john",
+      linkedinUrl: "linkedin.com/in/john",
+      phone: "2345678901",
+      image: skull,
+    },
   ];
 
   // Technical Team Members
@@ -32,7 +64,7 @@ export default function Body() {
       instaUrl: "instagram.com/alice",
       linkedinUrl: "linkedin.com/in/alice",
       phone: "3456789012",
-      image: skull
+      image: skull,
     },
     {
       name: "bob brown",
@@ -40,8 +72,8 @@ export default function Body() {
       instaUrl: "instagram.com/bob",
       linkedinUrl: "linkedin.com/in/bob",
       phone: "4567890123",
-      image: skull
-    }
+      image: skull,
+    },
   ];
 
   // Marketing Team Members
@@ -52,7 +84,7 @@ export default function Body() {
       instaUrl: "instagram.com/emma",
       linkedinUrl: "linkedin.com/in/emma",
       phone: "5678901234",
-      image: skull
+      image: skull,
     },
     {
       name: "abcd?",
@@ -60,8 +92,8 @@ export default function Body() {
       instaUrl: "instagram.com/charles",
       linkedinUrl: "linkedin.com/in/charles",
       phone: "6789012345",
-      image: skull
-    }
+      image: skull,
+    },
   ];
 
   const renderTeamCards = (members) =>
@@ -77,9 +109,7 @@ export default function Body() {
       />
     ));
 
-
-
-    // ------------------Maybe Dont Change after this-------------------- //
+  // ------------------Maybe Dont Change after this-------------------- //
   return (
     <div className="bg-[#FFF5Cf] w-full sm:w-[85%] sm:rounded-tr-3xl sm:rounded-br-3xl p-8 mb-[100px]">
       {/* Core Team */}

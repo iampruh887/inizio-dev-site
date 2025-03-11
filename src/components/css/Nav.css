@@ -1,14 +1,25 @@
 .navbar-container {
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative; /* Change from fixed to relative */
     z-index: 50;
     background: rgba(255, 107, 0, 0.1);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease-in-out,
+        background 0.3s ease;
+}
+
+/* When scrolled, make it fixed */
+.navbar-container.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
 }
 
 .navbar-content {
@@ -78,9 +89,10 @@
 .nav-wheel {
     height: 2rem;
     margin: 0 2rem;
-}
-.nav-wheel:hover {
     transition: transform 2s ease-in-out;
+}
+
+.nav-wheel:hover {
     transform: rotate(360deg);
 }
 
@@ -103,6 +115,13 @@
 /* Mobile Navigation */
 .mobile-nav {
     display: none;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show mobile nav when navbar is hidden */
+.navbar-hidden .mobile-nav {
+    transform: translateY(-100%);
 }
 
 /* Mobile Styles */
