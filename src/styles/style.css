@@ -419,15 +419,12 @@ body {
 .overlay-box {
    background-color: #fff5cf;
    width: 100%;
-   border-radius: 25px 25px 0px 0px;
    position: relative;
-   bottom: 25px;
 }
 
 .body-content {
    width: 100%;
    position: relative;
-   padding: 40px 0px 100px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -1162,9 +1159,6 @@ body {
       height: 35vh;
    }
 
-   .body-content {
-      padding: 20px 0px 60px;
-   }
 
    .spon-title>h4 {
       font-size: 1.8rem;

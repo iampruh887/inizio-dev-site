@@ -1,7 +1,7 @@
 import "./style.css";
+import React, { useState } from "react";
 import Footer from "../components_team/Footer";
 import EventCard from "./Events/EventCard";
-import React, { useState } from "react";
 import m1_front from "../assets/m1_front.jpeg";
 import m2_front from "../assets/m2_front.jpeg";
 import m1_back from "../assets/m1_back.jpeg";
@@ -41,14 +41,13 @@ function Home() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>INIZIO - 25</title>
       <link rel="stylesheet" href="style.css" />
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
-      />
-      <main>
+      /> */}
         <section>
           <div className="banner">
             <div>
@@ -59,7 +58,7 @@ function Home() {
         </section>
         <section>
           <div className="overlay-box">
-            <div className="body-content">
+            <div className="body-csntent">
               <div className="bg-gear">
                 <div className="article-l padd">
                   <div className="wide">
@@ -245,8 +244,6 @@ function Home() {
             </div>
           </div>
         </section>
-      </main>
-
       <Footer />
     </>
   );
