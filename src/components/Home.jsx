@@ -357,9 +357,9 @@ function Home() {
 
             <InsightArena />
           </div>
+          <Footer />
         </div>
       </section>
-      <Footer />
     </>
   );
 }

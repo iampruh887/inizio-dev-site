@@ -5,8 +5,7 @@ import Hero from "../Hero";
 import "./Events.css";
 
 const events_hero_title = "Events";
-const events_hero_desc =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+const events_hero_desc = "";
 
 const eventsData = [
   {
@@ -17,27 +16,26 @@ const eventsData = [
     no: "#001",
   },
   {
-
     title: "Digital-Duel Challenge",
     text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards! Ready to duel? Join the challenge and prove your marketing prowess!",
-    image: "https://promoalltest-blog.cdnpromo.com/wp-content/uploads/2022/12/OG-Social-Media-Trends-You-Need-to-Know-About-for-2023.jpg",
+    image:
+      "https://promoalltest-blog.cdnpromo.com/wp-content/uploads/2022/12/OG-Social-Media-Trends-You-Need-to-Know-About-for-2023.jpg",
     no: "#002",
-
   },
-  {
-    title: "Title 3",
-    text: "Don't miss this exclusive session!",
-    image:
-      "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
-    no: "#003",
-  },
-  {
-    title: "Title 4",
-    text: "Final event details here, be ready!",
-    image:
-      "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
-    no: "#004",
-  },
+  // {
+  //   title: "Title 3",
+  //   text: "Don't miss this exclusive session!",
+  //   image:
+  //     "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
+  //   no: "#003",
+  // },
+  // {
+  //   title: "Title 4",
+  //   text: "Final event details here, be ready!",
+  //   image:
+  //     "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
+  //   no: "#004",
+  // },
 ];
 
 const EventCard = ({ currentEvent }) => {

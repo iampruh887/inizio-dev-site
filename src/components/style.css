@@ -421,3 +421,7 @@
     background-color: var(--light);
     color: #000; /* Changed to black */
 }
+
+.overlay-box {
+    margin-bottom: -30px;
+}
