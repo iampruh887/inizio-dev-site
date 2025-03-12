@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import TeamPic from "./components_team/TeamPic";
 import Body from "./components_team/Body";
 import Footer from "./components_team/Footer";
-import Team from "./assets_team/skull.png";
+import Team from "./assets_team/The_Team.jpg";
 import Background from "./components_team/Background"; // Import the Background component
 
 function App() {
