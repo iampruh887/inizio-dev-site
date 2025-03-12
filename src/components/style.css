@@ -1,207 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-@font-face {
-    font-family: "Roboto";
-    font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;
-    font-style: NORMAL_OR_ITALIC;
-    font-weight: NUMERIC_RANGE_LOW_TO_HIGH;
-    src: url(FONT_FILE_NAME.woff2) format("woff2");
+:root {
+    --primary: #ff6b00;
+    --light: #fff5cf;
+    --dark: #131313;
+    --transition: all 0.3s ease;
 }
 
-/* #ff9f5a */
-/* #ff6b00 */
-
-/* fonts used in the project */
+/* Font declarations */
 @font-face {
-    font-family: "LexendExtraBold";
-    src: url("assets/fonts/Lexend-ExtraBold.ttf") format("truetype");
+    font-family: "PoppinsExtraBold";
+    src: url("assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
     font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "LexendBold";
-    src: url("assets/fonts/Lexend-Bold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "LexendRegular";
-    src: url("assets/fonts/Lexend-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "PoppinsMedium";
-    src: url("assets/fonts/Poppins-Medium.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
 }
 
 @font-face {
     font-family: "PoppinsBold";
     src: url("assets/fonts/Poppins-Bold.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 600;
 }
 
-@font-face {
-    font-family: "PoppinsExtraBold";
-    src: url("assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
-    font-weight: 800;
-    font-style: normal;
-}
-
-.banner {
-    background-image: url("assets_team/vector-background.jpg");
-}
-/* Banner Ends */
-
-/* Body Starts */
-
-.bg-gear {
-    background-image: url("assets/transp-gear.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: all 0.2s ease-in-out !important;
-}
-
-.article-l {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0px;
-}
-
-.padd {
-    padding: 150px 0px;
-    margin: -30px 0px;
-}
-
+/* Common styles */
 .wide {
     width: 70vw;
 }
-
-.head-title-l {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
+.padd {
+    padding: 150px 0;
+    margin: -30px 0;
 }
 
-.big-title {
-    display: inline-block;
-    font-family: PoppinsExtraBold, sans-serif;
-    font-size: 6rem;
-    line-height: 1;
-    white-space: nowrap;
-    transition: all 0.1s ease-in-out;
-}
-
-.headline-l {
-    margin: 15px 30px 10px;
-    font-size: 1.6rem;
-    font-family: RobotoRegular, sans-serif;
-    font-weight: 800;
-    color: #ff6b00;
-    transition: all 0.1s ease-in-out;
-    letter-spacing: 1px;
-}
-
-.hid-des {
-    margin: 20px 0px 5px;
-    display: none;
-}
-
-.down-title {
-    position: relative;
-    top: -10px;
-    display: flex;
-    justify-content: left;
-}
-
-.big-title > span {
-    position: relative;
-}
-
-.title-gear {
-    height: 120px;
-    position: absolute;
-    top: -20px;
-    margin: 0px 15px;
-}
-
-.head-des {
-    font-family: Roboto, sans-serif;
-    font-weight: 900;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    margin-top: 20px;
-}
-
-.para {
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin: 5px 0px 0px;
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
-
+/* Layout components */
+.article-l,
 .article-r {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px 0px;
+    margin: 30px 0;
+}
+
+.head-title-l,
+.head-title-r {
+    display: flex;
+    align-items: center;
+    text-align: left;
 }
 
 .head-title-r {
-    display: flex;
     justify-content: right;
-    align-items: center;
-    text-align: right;
 }
 
-.right {
-    text-align: right;
+.big-title {
+    font-family: PoppinsExtraBold, sans-serif;
+    font-size: 6rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
 }
 
+/* Text styles */
+.headline-l,
 .headline-r {
-    color: #ff6b00;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    font-family: RobotoRegular, sans-serif;
+    font-size: 1.6rem;
+    font-family: Roboto, sans-serif;
     font-weight: 800;
-    margin: 10px 0px 15px;
+    color: var(--primary);
+    letter-spacing: 1px;
 }
 
-.event-list {
-    margin: 100px 0px 150px;
+.headline-l {
+    margin: 15px 30px 10px;
+}
+.headline-r {
+    margin: 10px 0 15px;
 }
 
-.events {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.para {
+    font-family: Roboto, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 5px 0 0;
 }
 
+/* Event styles */
 .event {
-    background-color: #ff6b00;
+    background-color: var(--primary);
     border-radius: 15px;
     display: flex;
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
 .event-l {
     flex-direction: row;
 }
-
 .event-r {
     flex-direction: row-reverse;
 }
@@ -209,770 +101,53 @@
 .event-text {
     width: 55%;
     padding: 25px;
+    color: var(--light);
 }
 
-.event-title {
-    font-size: 6rem;
-    line-height: 1;
-    margin: 20px 0px 10px;
-    font-family: PoppinsBold, sans-serif;
-    font-weight: 600;
-}
-
-.event-des {
-    font-family: RobotoRegular, sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.3;
-    margin-bottom: 120px;
-}
-
-.event-outline {
-    background-color: #fff5cf;
-    border-radius: 15px;
-    width: 45%;
-}
-
-.event-img-l {
-    background-color: #131313;
-    height: 100%;
-    margin-left: 25px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.event-img-r {
-    background-color: #131313;
-    height: 100%;
-    margin-right: 25px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.event-tag {
-    position: absolute;
-    bottom: 25px;
-    right: 15px;
-    letter-spacing: 8px;
-    font-family: PoppinsExtraBold, sans-serif;
-    color: #ff6b00;
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.tag-r {
-    left: 25px;
-}
-
+/* Merch styles */
 .merch-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
 .merches {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    gap: 2rem;
 }
 
 .merch {
-    background-color: #ff6b00;
+    background-color: var(--primary);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(33.33% - 1.33rem);
     height: 700px;
-    width: 40%;
-    margin: 60px 0px 120px;
+    margin: 60px 0 120px;
 }
 
 .merch-outline {
-    background-color: #fff5cf;
+    background-color: var(--light);
     border-radius: 15px;
-    width: 100%;
     height: 100%;
     padding-bottom: 25px;
 }
 
-.merch-img {
-    background-color: #131313;
-    height: 100%;
-    margin-bottom: 25px;
-    border-radius: 15px;
-}
-
-.merch-data {
-    padding: 20px;
-}
-
-.merch-name {
-    font-family: PoppinsBold, sans-serif;
-    font-weight: 800;
-    font-size: 3.5rem;
-    line-height: 1;
-}
-
-.merch-avail {
-    font-family: RobotoRegular, sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #ffffff;
-    letter-spacing: 1px;
-    margin: 5px 0px;
-}
-
-.merch-size {
-    font-family: RobotoRegular, sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #131313;
-    letter-spacing: 1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 60%;
-    margin: 10px 0px;
-}
-
-.avail,
-.sold {
-    background-color: #ffeee5;
-    width: 26%;
-    border-radius: 5px;
-    margin: 5px 0px;
-    text-align: center;
-    padding: 5px;
-    height: 100%;
-}
-
-.sold {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.merch-buy {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-.merch-buy > button {
-    background-color: #fff5cf;
-    font-family: RobotoRegular, sans-serif;
-    font-weight: 600;
-    font-size: 1.3rem;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    bottom: 0px;
-    right: 0px;
-    border-bottom: 5px solid #a94600cf;
-}
-
-/* Body Ends */
-
-.icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 20px 5px;
-}
-
-.icon {
-    margin: 0px 20px;
-    cursor: pointer;
-    font-size: 50px;
-    transition: all 0.1s ease-in-out;
-}
-
-.icon > a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-#insta:hover,
-#insta:active {
-    background: linear-gradient(45deg, #feda77, #f58529, #dd2a7b, #bc2a8d 100%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-#linkedin:hover,
-#linkedin:active {
-    background: linear-gradient(45deg, #004a99, #1cb3ff 100%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-.copyright {
-    color: #ffffff;
-    text-align: center;
-    font-family: RobotoLight, sans-serif;
-    letter-spacing: 1px;
-    font-size: 1.45em;
-    margin: 20px 0px;
-    transition: all 0.1s ease-in-out;
-}
-
-/* Footer Ends */
-
-/* MEDIA QUERIES */
-
-@media (min-width: 1280px) {
-    .foot-content {
-        flex-wrap: nowrap;
-    }
-
-    .foot-text > div {
-        margin-bottom: 10px;
-    }
-
-    .f-logo-box {
-        margin-left: 60px;
-    }
-}
-
-/* Extra Large Devices (Large Screens, TVs) */
-@media (max-width: 1280px) {
-    .f-logo-box,
-    .foot-text {
-        margin: 30px 0px 10px;
-    }
-
-    .wide {
-        width: 75vw;
-    }
-
-    .big-title {
-        font-size: 4.8rem;
-    }
-
-    .headline-l,
-    .headline-r {
-        font-size: 1.4rem;
-    }
-
-    .head-des {
-        font-size: 1.3rem;
-    }
-
-    .para {
-        line-height: 1.35;
-    }
-
-    .event-title {
-        font-size: 4.2rem;
-    }
-
-    .event-des {
-        font-size: 1.25rem;
-        margin-bottom: 80px;
-    }
-
-    .event-list {
-        margin: 60px 0px 100px;
-    }
-}
-
-/* Large Devices (Desktops) till 992px*/
-@media (max-width: 992px) {
-    /* .navbar {
-        background-color: transparent;
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: none;
-    } */
-
-    /* .nav-tab {
-        display: none;
-    } */
-
-    .mob-gear > img {
-        display: block;
-    }
-
-    .left-tri,
-    .top-right-tri {
-        display: none;
-    }
-
-    .right-tri,
-    .top-left-tri {
-        width: 100%;
-    }
-
-    .title-text {
-        font-size: clamp(3rem, 10vw, 7rem);
-    }
-
-    .sponsor-type {
-        padding-top: 60px;
-    }
-
-    .spon-title > h4 {
-        font-size: 2rem;
-    }
-
-    .logo > a > img {
-        height: 55px;
-        margin: 10px 0px;
-    }
-
-    .foot-gear {
-        margin: 20px 0px;
-        height: 130px;
-    }
-
-    .foot-logo {
-        margin: 20px 0px;
-        height: 120px;
-    }
-
-    .logo-des {
-        font-size: 1.1rem;
-        margin: 0px;
-        padding: 10px 20px !important;
-        width: 100%;
-    }
-
-    .foot-text > div {
-        margin: 20px;
-    }
-
-    .foot-text > div > h4 {
-        margin: 10px 20px 30px;
-    }
-
-    .copyright {
-        font-size: 1.1rem;
-    }
-
-    .wide {
-        width: 80vw;
-    }
-
-    .padd {
-        margin: -50px 0px;
-        padding: 90px 0px;
-    }
-
-    .bg-gear {
-        background-position: top left;
-        background-size: 50%;
-        background-clip: border-box;
-    }
-
-    .big-title {
-        font-size: 4rem;
-    }
-
-    .headline-l,
-    .headline-r {
-        font-size: 1.3rem;
-    }
-
-    .head-des {
-        font-size: 1.2rem;
-    }
-
-    .para {
-        font-size: 1.15rem;
-    }
-
-    .event-title {
-        font-size: 3.5rem;
-    }
-
-    .event-des {
-        font-size: 1.15rem;
-        margin-bottom: 70px;
-    }
-
-    .event-tag {
-        font-size: 1.4rem;
-    }
-
-    .event-list {
-        margin: 40px 0px 70px;
-    }
-}
-
-/* Medium Devices (Laptops, Small Desktops) */
-@media (max-width: 780px) {
-    .tri {
-        height: 35vh;
-    }
-
-    .spon-title > h4 {
-        font-size: 1.8rem;
-    }
-
-    .sponsor-type {
-        padding-top: 30px;
-    }
-
-    .spon {
-        margin: 20px 20px 5px;
-    }
-
-    .spon-img {
-        margin-top: 5px;
-    }
-
-    .f-logo-box,
-    .foot-text {
-        margin: 30px 0px 10px;
-    }
-
-    .foot-gear {
-        margin: 20px 0px;
-        height: 130px;
-    }
-
-    .foot-logo {
-        margin: 20px 0px;
-        height: 120px;
-    }
-
-    .logo-des {
-        font-size: 1.1rem;
-        margin: 0px;
-        padding: 10px 20px !important;
-        width: 100%;
-    }
-
-    .foot-text > div {
-        margin: 20px;
-    }
-
-    .foot-text > div > h4 {
-        margin: 10px 20px 30px;
-    }
-
-    .copyright {
-        font-size: 1.1rem;
-    }
-
-    .bg-gear {
-        background-size: 70%;
-    }
-
-    .big-title {
-        font-size: 3.5rem;
-        white-space: wrap;
-    }
-
-    .down-title {
-        top: 0px;
-    }
-
-    .headline-l {
-        display: none;
-    }
-
-    .hid-des,
-    .headline-r {
-        display: block;
-        font-size: 1.3rem;
-    }
-
-    .head-des {
-        font-size: 1.1rem;
-        font-family: "Roboto", sans-serif;
-        font-weight: 900;
-        margin: 10px 0px 5px;
-    }
-
-    .title-gear {
-        display: none;
-    }
-
-    .padd {
-        margin: -20px 0px;
-        padding: 80px 0px 30px;
-    }
-
-    .event-title {
-        font-size: 3rem;
-    }
-
-    .event-des {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-    }
-
-    .event-text {
-        padding: 10px 25px;
-    }
-
-    .event-tag {
-        font-size: 1.3rem;
-    }
-
-    .event-list {
-        margin: 40px 0px 70px;
-    }
-}
-
-/* Small Devices (Tablets, Large Phones) */
-@media (max-width: 576px) {
-    .spon-title > h4 {
-        font-size: 1.6rem;
-    }
-
-    .f-logo-box,
-    .foot-text {
-        margin: 30px 0px 10px;
-    }
-
-    .foot-gear {
-        width: 100%;
-        margin: 20px 0px;
-        height: 130px;
-    }
-
-    .foot-logo {
-        width: 100%;
-        margin: 20px 0px;
-        height: 120px;
-    }
-
-    .logo-des {
-        font-size: 1rem;
-        margin: 0px;
-        padding: 10px 20px !important;
-        width: 100%;
-    }
-
-    .foot-text > div {
-        margin: 20px;
-    }
-
-    .foot-text > div > h4 {
-        font-size: 1.8rem;
-        margin: 10px 20px 30px;
-    }
-
-    .icon {
-        font-size: 40px;
-    }
-
-    .copyright {
-        font-size: 0.9rem;
-    }
-
-    .wide {
-        width: 88vw;
-    }
-
-    .padd {
-        margin: 0px;
-        padding: 50px 0px 30px;
-    }
-
-    .big-title {
-        font-size: 2.3rem;
-    }
-
-    .para {
-        font-size: 1rem;
-        font-weight: 400;
-    }
-
-    .head-des {
-        margin-bottom: 8px;
-    }
-
-    .event-list {
-        margin: 30px 30px;
-    }
-
-    .event {
-        margin: 10px 5px 50px;
-    }
-
-    .event-l {
-        flex-direction: column-reverse;
-    }
-
-    .event-r {
-        flex-direction: column-reverse;
-    }
-
-    .event-text {
-        padding: 10px 25px;
-        width: 100%;
-        height: 80vw;
-    }
-
-    .event-title {
-        font-size: 3rem;
-    }
-
-    .event-des {
-        font-size: 1.1rem;
-        margin-bottom: 50px;
-    }
-
-    .event-outline {
-        width: 100%;
-        height: 55%;
-    }
-
-    .event-img-l,
-    .event-img-r {
-        width: 100%;
-        height: 90vw;
-        margin: 0px 0px 20px;
-        transition: all 0s ease-in-out;
-    }
-
-    .merches {
-        padding: 0px 10px 15px;
-    }
-
-    .merch {
-        width: 100%;
-        margin: 15px 0px 30px;
-        height: 600px;
-    }
-
-    .merch-outline {
-        padding-bottom: 20px;
-    }
-
-    .merch-name {
-        font-size: 3.2rem;
-    }
-
-    .merch-size {
-        width: 75%;
-    }
-
-    .avail,
-    .sold {
-        font-size: 1.2rem;
-    }
-
-    .merch-buy > button {
-        font-size: 1.2rem;
-    }
-}
-.event-list {
-    margin: 100px 0px 150px;
-}
-
-.events {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.event {
-    background-color: #ff6b00;
-    border-radius: 15px;
-    display: flex;
-    margin: 15px 0px;
-}
-
-.event-l {
-    flex-direction: row;
-}
-
-.event-r {
-    flex-direction: row-reverse;
-}
-
-.event-text {
-    width: 55%;
-    padding: 25px;
-    color: #fff5cf;
-}
-
-.event-title {
-    font-size: 6rem;
-    line-height: 1;
-    margin: 20px 0px 10px;
-    font-family: PoppinsBold, sans-serif;
-    font-weight: 600;
-}
-
-.event-des {
-    font-family: RobotoRegular, sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.3;
-    margin-bottom: 120px;
-}
-
-.event-outline {
-    background-color: #ff6b00;
-    border-radius: 15px;
-    width: 45%;
-}
-
-.event-img-l {
-    background-color: #131313;
-    height: 100%;
-    margin-left: 25px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.event-img-r {
-    background-color: #131313;
-    height: 100%;
-    margin-right: 25px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.event-tag {
-    position: absolute;
-    bottom: 25px;
-    right: 15px;
-    letter-spacing: 8px;
-    font-family: PoppinsExtraBold, sans-serif;
-    color: #ff6b00;
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.tag-r {
-    left: 25px;
-}
-
-.merch-img {
-    background-color: #131313;
-    height: 100%;
-    margin-bottom: 25px;
-    border-radius: 15px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-.merch-img:hover {
-    transform: scale(1.12);
-}
-
+/* Merch image container and flip functionality */
 .merch-img-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother easing */
+    height: 400px;
     transform-style: preserve-3d;
+    transition: transform 0.6s;
+    perspective: 1000px;
     cursor: pointer;
     margin-bottom: 25px;
-    perspective: 1000px; /* Adds better 3D effect */
+}
+
+.merch-img-container.flipped {
+    transform: rotateY(180deg);
 }
 
 .merch-img-front,
@@ -981,164 +156,107 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 15px;
-    background-color: #131313;
+    background-color: var(--dark);
     background-size: cover;
     background-position: center;
-    -webkit-backface-visibility: hidden; /* For Safari */
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: var(--transition);
 }
 
 .merch-img-back {
     transform: rotateY(180deg);
 }
 
-/* Optional: Add hover effect */
-
-.article-l {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0px;
+.enlarged-image {
+    position: fixed;
 }
 
-.head-title-l {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
+/* Enlarged image styles */
+.merch-img-container.enlarged .merch-img-front,
+.merch-img-container.enlarged .merch-img-back {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    z-index: 1000;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.big-title {
-    font-family: PoppinsExtraBold, sans-serif;
-    font-size: 6rem;
-    line-height: 1;
-    white-space: nowrap;
+.merch-img-container.enlarged.flipped .merch-img-back {
+    transform: translate(-50%, -50%) rotateY(180deg);
 }
 
-.headline-l {
-    margin: 15px 30px 10px;
-    font-size: 1.6rem;
-    font-family: RobotoRegular, sans-serif;
-    font-weight: 800;
-    color: #ff6b00;
-    letter-spacing: 1px;
+/* Button styles */
+.click-me-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--light);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font:
+        600 0.9rem Roboto,
+        sans-serif;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: var(--transition);
 }
 
-.head-des {
-    font-family: Roboto, sans-serif;
-    font-weight: 900;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    margin-top: 20px;
+.click-me-button:hover {
+    transform: scale(1.1);
+    background-color: var(--primary);
+    color: var(--light);
 }
 
-.merches {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 100%;
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
 }
 
-.merch {
-    flex: 1;
-    min-width: 300px;
-    max-width: calc(33.33% - 1.33rem);
-    margin: 60px 0px 120px;
+.overlay.active {
+    display: block;
 }
 
-/* InsightArena slider fixes */
-.slider-container {
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 2rem;
-    width: 100%;
-}
-
-.slider {
-    display: flex;
-    width: max-content;
-    gap: 1rem;
-}
-
-.card {
-    flex: 0 0 300px;
-    height: 200px;
-    padding: 1.5rem;
-    background-color: #000;
-    border: 1px solid #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 4px;
-    color: white;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Update animation speeds and timing */
-.slider-ltr {
-    animation: slide-left 40s linear infinite;
-}
-
-.slider-rtl {
-    animation: slide-right 40s linear infinite;
-}
-
-@keyframes slide-left {
-    0% {
-        transform: translateX(0);
+/* Media Queries */
+@media (max-width: 1280px) {
+    .wide {
+        width: 75vw;
     }
-    100% {
-        transform: translateX(-50%);
+    .big-title {
+        font-size: 4.8rem;
     }
-}
-
-@keyframes slide-right {
-    0% {
-        transform: translateX(-50%);
+    .headline-l,
+    .headline-r {
+        font-size: 1.4rem;
     }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .merch {
-        max-width: calc(50% - 1rem);
-    }
-
-    .card {
-        flex: 0 0 250px;
+    .para {
+        line-height: 1.35;
     }
 }
 
 @media (max-width: 992px) {
-    .slider-ltr,
-    .slider-rtl {
-        animation-duration: 30s;
+    .wide {
+        width: 80vw;
     }
-
-    .card {
-        flex: 0 0 220px;
-        height: 180px;
-        padding: 1.25rem;
+    .big-title {
+        font-size: 4rem;
     }
-
-    .card h3 {
-        font-size: 1.4rem;
+    .headline-l,
+    .headline-r {
+        font-size: 1.3rem;
     }
-
-    .card p {
-        font-size: 0.9rem;
+    .para {
+        font-size: 1.15rem;
     }
 }
 
@@ -1147,95 +265,54 @@
         max-width: 100%;
         margin: 30px 0;
     }
-
-    .slider-container {
-        margin-bottom: 1.5rem;
+    .merch-img-container {
+        height: 300px;
     }
-
-    .card {
-        flex: 0 0 200px;
-        height: 160px;
-        padding: 1rem;
+    .click-me-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
-
-    .slider-ltr,
-    .slider-rtl {
-        animation-duration: 25s;
+    .big-title {
+        font-size: 3.5rem;
+        white-space: wrap;
     }
 }
 
 @media (max-width: 576px) {
-    .card {
-        flex: 0 0 180px;
-        height: 140px;
+    .wide {
+        width: 88vw;
     }
-
-    .card h3 {
-        font-size: 1.2rem;
+    .big-title {
+        font-size: 2.3rem;
     }
-
-    .card p {
-        font-size: 0.8rem;
-    }
-
-    .slider-ltr,
-    .slider-rtl {
-        animation-duration: 20s;
+    .merch {
+        width: 100%;
+        height: 600px;
     }
 }
 
-/* Pause animations on hover */
-.slider-container:hover .slider {
-    animation-play-state: paused;
-}
-
-/* Smooth animation performance */
-.slider {
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Add touch interaction support */
-@media (hover: none) {
-    .card:hover {
-        transform: none;
+/* Animations */
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }
 
-/* Prevent animation flicker */
-.slider-container {
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-}
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+@keyframes slide-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
-.modal-content {
-    display: block;
-    margin: auto;
-    max-width: 80%;
-    max-height: 80vh;
-    padding: 20px;
+.slider-ltr {
+    animation: slide-left 40s linear infinite;
 }
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
+.slider-rtl {
+    animation: slide-right 40s linear infinite;
 }
