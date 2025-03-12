@@ -14,9 +14,10 @@
     display: flex;
 }
 .hash-001 {
-    position: absolute;
-    width: 202px;
-    height: 48px;
+    /* position: absolute; */
+    display: inline-block;
+    /* width: 202px;
+    height: 48px; */
     top: 606px;
     left: calc(50% - 6.5px);
     color: #ff6b00;
@@ -27,11 +28,12 @@
     text-align: right;
 }
 .arrow {
-    position: absolute;
+    /*position: absolute;*/
     width: 19.524px;
     height: 19.524px;
-    top: 614px;
-    left: 202px;
+    margin-left: 10px;
+    /* top: 614px;
+    left: 202px; */
     background: url(https://static.codia.ai/image/2025-03-03/5188bbb9-05d7-464d-bf63-4439be6a06da.svg)
         no-repeat center;
     background-size: cover;
@@ -84,19 +86,37 @@
     text-transform: uppercase;
     margin-top: 16px;
 }
-.Event_event {
+
+.event-title-container {
     position: absolute;
-    width: 202px;
-    height: 69px;
+    top: 580px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px
+}
+
+.event-with-arrow{
+    display: flex;
+    align-items: center;
+    /* flex-grow: 1fr; */
+}
+
+.Event_event {
+    /* position: absolute; */
+    /* width: 202px;
+    height: 69px; */
+    display: inline-block;
     top: 580px;
     left: calc(50% - 220px);
     color: #ff6b00;
     font-family: Inter, var(--default-font-family);
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 400;
-    line-height: 69px;
+    /* line-height: 69px; */
     text-align: center;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 .event-button {
     color: #000000;

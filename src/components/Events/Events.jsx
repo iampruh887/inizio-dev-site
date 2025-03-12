@@ -10,18 +10,18 @@ const events_hero_desc =
 
 const eventsData = [
   {
-    title: "IPL Auction 2.0: The Ultimate Strategy Challenge!",
+    title: "IPL Auction 2.0",
     text: "Gear up for an electrifying event at IIIT’s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players (4 batsmen, 4 bowlers, 2 all-rounders, 1 wicket-keeper, and 1 impact player) while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!",
     image:
       "https://bsmedia.business-standard.com/_media/bs/img/article/2023-12/12/full/1702358133-3099.jpg?im=FeatureCrop,size=(826,465)",
-    no: "#420",
+    no: "#001",
   },
   {
 
-    title: "Digital-Duel Challenge: Master the Art of Marketing!",
+    title: "Digital-Duel Challenge",
     text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards! Ready to duel? Join the challenge and prove your marketing prowess!",
     image: "https://promoalltest-blog.cdnpromo.com/wp-content/uploads/2022/12/OG-Social-Media-Trends-You-Need-to-Know-About-for-2023.jpg",
-    no: "#652",
+    no: "#002",
 
   },
   {
@@ -45,11 +45,15 @@ const EventCard = ({ currentEvent }) => {
     <AnimatePresence mode="wait">
       <div className="Event-container  flex justify-center gap-6 py-10 bg-yellow-100">
         <div className="rectangle bg-gray-700 text-white p-6 max-w-md">
-          <span class="event-title">{eventsData[currentEvent].title}</span>
+          {/* <span class="event-title">{eventsData[currentEvent].title}</span> */}
           <p className="event-description">{eventsData[currentEvent].text}</p>
-          <p className="Event_event">@event</p>
-          <span className="hash-001">{eventsData[currentEvent].no}</span>
-          <div className="arrow" />
+          <div className="event-title-container">
+            <div className="event-with-arrow">
+              <p className="Event_event">@{eventsData[currentEvent].title}</p>
+              <div className="arrow" />
+            </div>
+            <span className="hash-001">{eventsData[currentEvent].no}</span>
+          </div>
         </div>
 
         <motion.div
