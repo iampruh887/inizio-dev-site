@@ -2,13 +2,10 @@
     width: 100%;
     position: relative; /* Change from fixed to relative */
     z-index: 50;
-    background: rgba(255, 107, 0, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition:
-        transform 0.3s ease-in-out,
-        background 0.3s ease;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+    background: transparent !important;
+    backdrop-filter: blur(1008px) !important;
 }
 
 /* When scrolled, make it fixed */
@@ -27,7 +24,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Logo Styles */
@@ -48,42 +44,19 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    justify-content: space-between;
+    width: 75%;
 }
 
 /* Base nav link styles */
 .nav-link {
     text-decoration: none;
     font-weight: 600;
-    transition:
-        color 0.3s ease,
-        background-color 0.3s ease;
+    transition: color 0.3s ease;
+    /* background-color 0.3s ease; */
 }
 
 /* Dark/Light Theme Styles */
-.navbar-container.dark-bg .nav-link {
-    color: #ffffff !important;
-}
-
-.navbar-container.dark-bg .nav-link:hover {
-    color: #ff7833 !important;
-}
-
-.navbar-container.light-bg .nav-link {
-    color: #333333 !important;
-}
-
-.navbar-container.light-bg .nav-link:hover {
-    color: #ff6b00 !important;
-}
-
-/* Scrolled States */
-.navbar-container.scrolled.dark-bg {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.navbar-container.scrolled.light-bg {
-    background: rgba(255, 255, 255, 0.2);
-}
 
 /* Wheel Icon */
 .nav-wheel {
@@ -199,4 +172,14 @@
     .navbar-logo img {
         height: 50px;
     }
+}
+.navbar-container {
+    width: 100%;
+    position: relative; /* Change from fixed to relative */
+    z-index: 100;
+    /* display: none; */
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+    background: transparent !important;
+    backdrop-filter: blur(0px) !important;
 }

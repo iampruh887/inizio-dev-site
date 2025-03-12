@@ -1,15 +1,18 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
 
-const TeamCard = ({ name, designation, instaUrl, linkedinUrl, phone, image }) => {
+const TeamCard = ({
+  name,
+  designation,
+  instaUrl,
+  linkedinUrl,
+  phone,
+  image,
+}) => {
   return (
     <div className="relative w-[250px] h-[250px] lg:w-[295px] lg:h-[295px]  flex items-center justify-center">
       <div className="absolute w-[180px] h-[180px] lg:w-[210px] lg:h-[210px] ">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-full h-full object-cover"
-        />
+        <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
       <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[40%] rotate-[-90deg] flex items-center text-sm font-semibold lg:text-lg">
@@ -24,7 +27,10 @@ const TeamCard = ({ name, designation, instaUrl, linkedinUrl, phone, image }) =>
         <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-xl hover:text-blue-500 transition lg:text-2xl" />
         </a>
-        <a href={`tel:${phone}`} className="text-xl hover:text-green-500 transition lg:text-2xl">
+        <a
+          href={`tel:${phone}`}
+          className="text-xl hover:text-green-500 transition lg:text-2xl"
+        >
           <FaPhone />
         </a>
       </div>
