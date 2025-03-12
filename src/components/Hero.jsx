@@ -7,11 +7,11 @@ const Hero = ({ title, desc }) => {
     <div className="hero-wrapper">
       <section className="hero-container">
         <div className="hero-background">
-          <img
+          {/* <img
             src={Img}
             alt="Hero background"
             className="hero-background-image"
-          />
+          /> */}
         </div>
 
         <div className="hero-content">

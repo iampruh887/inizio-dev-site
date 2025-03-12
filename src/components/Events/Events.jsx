@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../../components_team/Footer";
 import Hero from "../Hero";
-import Navbar from "../Navbar";
 import "./Events.css";
 
 const events_hero_title = "Events";
@@ -18,10 +17,12 @@ const eventsData = [
     no: "#420",
   },
   {
+
     title: "Digital-Duel Challenge: Master the Art of Marketing!",
     text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards! Ready to duel? Join the challenge and prove your marketing prowess!",
     image: "https://promoalltest-blog.cdnpromo.com/wp-content/uploads/2022/12/OG-Social-Media-Trends-You-Need-to-Know-About-for-2023.jpg",
     no: "#652",
+
   },
   {
     title: "Title 3",
@@ -33,7 +34,8 @@ const eventsData = [
   {
     title: "Title 4",
     text: "Final event details here, be ready!",
-    image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
+    image:
+      "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
     no: "#004",
   },
 ];
@@ -50,20 +52,20 @@ const EventCard = ({ currentEvent }) => {
           <div className="arrow" />
         </div>
 
-      <motion.div
-        key={currentEvent}
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -50 }}
-        transition={{ duration: 0.5 }}
-        className=""
-      >
-        <img
-          src={eventsData[currentEvent].image}
-          alt="Event"
-          className="image object-cover"
-        />
-      </motion.div>
+        <motion.div
+          key={currentEvent}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+          className=""
+        >
+          <img
+            src={eventsData[currentEvent].image}
+            alt="Event"
+            className="image object-cover"
+          />
+        </motion.div>
       </div>
     </AnimatePresence>
   );

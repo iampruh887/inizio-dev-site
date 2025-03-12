@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-
 @font-face {
     font-family: "Roboto";
     font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;
@@ -35,29 +33,6 @@
     font-style: normal;
 }
 
-/*
-.roboto-regular {
-   font-family: "Roboto", sans-serif;
-   font-optical-sizing: auto;
-   font-weight: 400;
-   font-style: normal;
-   font-variation-settings: "wdth" 100;
-}
-
-@font-face {
-   font-family: 'RobotoLight';
-   src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
-   font-weight: 100;
-   font-style: normal;
-}
-
-@font-face {
-   font-family: 'RobotoRegular';
-   src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
-   font-weight: 400;
-   font-style: normal;
-} */
-
 @font-face {
     font-family: "PoppinsMedium";
     src: url("assets/fonts/Poppins-Medium.ttf") format("truetype");
@@ -79,18 +54,6 @@
     font-style: normal;
 }
 
-/* Universal styles */
-/* body {
-    font-family: RobotoRegular, Arial, Helvetica;
-    position: relative;
-    background-color: #131313;
-} */
-
-/* BODY OF PAGE BEGINS HERE */
-
-/* LANDING PAGE CLASSES STARTS */
-
-/* Banner Starts */
 .banner {
     background-image: url("assets_team/vector-background.jpg");
 }
@@ -998,7 +961,7 @@
 }
 
 .merch-img:hover {
-    transform: scale(1.02);
+    transform: scale(1.12);
 }
 
 .merch-img-container {
@@ -1010,10 +973,6 @@
     cursor: pointer;
     margin-bottom: 25px;
     perspective: 1000px; /* Adds better 3D effect */
-}
-
-.merch-img-container.flipped {
-    transform: rotateY(180deg);
 }
 
 .merch-img-front,
@@ -1036,13 +995,7 @@
 }
 
 /* Optional: Add hover effect */
-.merch-img-container:hover {
-    transform: rotateY(5deg) scale(1.02);
-}
 
-.merch-img-container.flipped:hover {
-    transform: rotateY(175deg) scale(1.02);
-}
 .article-l {
     display: flex;
     flex-direction: column;
@@ -1257,4 +1210,32 @@
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80vh;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
 }

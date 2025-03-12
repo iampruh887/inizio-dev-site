@@ -9,7 +9,7 @@ const Background = ({ children }) => {
         <img
           src={Img}
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover mix-blend-color-dodge"
+          className="absolute inset-0 w-full  mix-blend-color-dodge"
         />
         <div className="relative z-10">{children}</div>
       </div>

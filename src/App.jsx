@@ -16,36 +16,35 @@ function App() {
       <div className="overflow-hidden">
         {" "}
         {/* Add this wrapper */}
-          <Background>
+        <Background>
           <Navbar />
-        <Routes>
-          <Route
-            path="/Teams"
-            element={
-              <>
-                <TeamPic imageUrl={Team} />
-                <Body />
-                <Footer />
-              </>
+          <Routes>
+            <Route
+              path="/Teams"
+              element={
+                <>
+                  <TeamPic imageUrl={Team} />
+                  <Body />
+                  <Footer />
+                </>
               }
-              />
-          <Route
-            path="/*"
-            element={
-              <>
-                {/* <Navbar /> */}
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  {/* <Route path="/" element={<Navigate to="home.html" />} /> */}
-                  {/* <Route path="/Home" element={<Home />} /> */}
-                  <Route path="/Events" element={<Events />} />
-                  <Route path="/Sponsors" element={<Sponsors />} />
-                </Routes>
-              </>
-            }
             />
-        </Routes>
-            </Background>
+            <Route
+              path="/*"
+              element={
+                <>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    {/* <Route path="/" element={<Navigate to="home.html" />} /> */}
+                    {/* <Route path="/Home" element={<Home />} /> */}
+                    <Route path="/Events" element={<Events />} />
+                    <Route path="/Sponsors" element={<Sponsors />} />
+                  </Routes>
+                </>
+              }
+            />
+          </Routes>
+        </Background>
       </div>
     </Router>
   );
