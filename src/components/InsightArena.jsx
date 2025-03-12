@@ -1,3 +1,5 @@
+import image_CG from "../assets/CG.png";
+
 // src/components/InsightArena.jsx
 import React, { useState, useEffect, useRef } from "react";
 import "./InsightArena.css";
@@ -63,6 +65,15 @@ const InsightArena = () => {
         <p className="tagline">
           SPEAKER EXPRESS - INSIGHTS FROM THE BEST IN THE GAME!
         </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            paddingBottom: "30px",
+          }}
+        >
+          <img src={image_CG} style={{ marginTop: "-60px", width: "70%" }} />
+        </div>
         <div className="description">
           <p>
             Fast-track your learning with industry giants, startup founders, and
