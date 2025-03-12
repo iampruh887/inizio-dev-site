@@ -28,8 +28,6 @@ function Home() {
     },
   ]);
 
-  const [enlargedImage, setEnlargedImage] = useState(null);
-
   const handleImageFlip = (index, e) => {
     e.stopPropagation();
     setMerchImages(
@@ -39,8 +37,8 @@ function Home() {
     );
   };
 
-  const handleImageClick = (index) => {
-    setEnlargedImage(enlargedImage === index ? null : index);
+  const handleImageClick = (image) => {
+    window.open(image, "_blank");
   };
 
   return (
@@ -307,31 +305,33 @@ function Home() {
                   {merchImages.map((merch, index) => (
                     <div className="merch" key={index}>
                       <div className="merch-outline">
-                        <div
-                          className={`merch-img-container ${
-                            merch.isFlipped ? "flipped" : ""
-                          } ${enlargedImage === index ? "enlarged" : ""}`}
-                        >
+                        <div className={`merch-img-container`}>
+                          {/* Single button that stays in place */}
                           <button
                             className="click-me-button"
                             onClick={(e) => handleImageFlip(index, e)}
                           >
                             Click to Flip!
                           </button>
+                          {/* Wrapper that handles the flip */}
                           <div
-                            className="merch-img-front"
-                            style={{
-                              backgroundImage: `url(${merch.frontImage})`,
-                            }}
-                            onClick={() => handleImageClick(index)}
-                          />
-                          <div
-                            className="merch-img-back"
-                            style={{
-                              backgroundImage: `url(${merch.backImage})`,
-                            }}
-                            onClick={() => handleImageClick(index)}
-                          />
+                            className={`merch-img-wrapper ${merch.isFlipped ? "flipped" : ""}`}
+                          >
+                            <div
+                              className="merch-img-front"
+                              style={{
+                                backgroundImage: `url(${merch.frontImage})`,
+                              }}
+                              onClick={() => handleImageClick(merch.frontImage)}
+                            />
+                            <div
+                              className="merch-img-back"
+                              style={{
+                                backgroundImage: `url(${merch.backImage})`,
+                              }}
+                              onClick={() => handleImageClick(merch.backImage)}
+                            />
+                          </div>
                         </div>
                       </div>
                       <div className="merch-data">
@@ -353,10 +353,6 @@ function Home() {
                   ))}
                 </div>
               </div>
-              <div
-                className={`overlay ${enlargedImage !== null ? "active" : ""}`}
-                onClick={() => setEnlargedImage(null)}
-              />
             </div>
 
             <InsightArena />

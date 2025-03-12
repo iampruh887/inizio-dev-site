@@ -119,7 +119,7 @@
 }
 
 .merch {
-    background-color: var(--primary);
+    background-color: #131313;
     border-radius: 15px;
     flex: 1;
     min-width: 300px;
@@ -129,24 +129,30 @@
 }
 
 .merch-outline {
-    background-color: var(--light);
+    background-color: #131313;
     border-radius: 15px;
     height: 100%;
     padding-bottom: 25px;
+    overflow: hidden;
 }
 
 /* Merch image container and flip functionality */
 .merch-img-container {
     position: relative;
     height: 400px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
     perspective: 1000px;
-    cursor: pointer;
     margin-bottom: 25px;
 }
 
-.merch-img-container.flipped {
+.merch-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.merch-img-wrapper.flipped {
     transform: rotateY(180deg);
 }
 
@@ -158,36 +164,14 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: 15px;
-    background-color: var(--dark);
+    background-color: #131313;
     background-size: cover;
     background-position: center;
-    transition: var(--transition);
+    cursor: pointer;
 }
 
 .merch-img-back {
     transform: rotateY(180deg);
-}
-
-.enlarged-image {
-    position: fixed;
-}
-
-/* Enlarged image styles */
-.merch-img-container.enlarged .merch-img-front,
-.merch-img-container.enlarged .merch-img-back {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
-    z-index: 1000;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.merch-img-container.enlarged.flipped .merch-img-back {
-    transform: translate(-50%, -50%) rotateY(180deg);
 }
 
 /* Button styles */
@@ -204,27 +188,108 @@
         sans-serif;
     border: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 5;
     transition: var(--transition);
 }
 
 .click-me-button:hover {
-    transform: scale(1.1);
     background-color: var(--primary);
     color: var(--light);
+    transform: scale(1.1);
 }
 
-/* Overlay */
-.overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
+/* Merch data styles */
+.merch-data {
+    padding: 0 25px;
+    background-color: #131313;
+    border-radius: 0 0 15px 15px;
 }
 
-.overlay.active {
-    display: block;
+.merch-name {
+    font-family: PoppinsBold, sans-serif;
+    font-size: 1.8rem;
+    color: var(--light);
+    margin-bottom: 15px;
+}
+
+.merch-avail {
+    font-family: Roboto, sans-serif;
+    font-size: 1.2rem;
+    color: var(--light);
+    margin-bottom: 10px;
+}
+
+.merch-size {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.merch-size p {
+    font-family: Roboto, sans-serif;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.merch-size .sold {
+    background-color: #ff000033;
+    color: #ff0000;
+}
+
+.merch-size .avail {
+    background-color: #00ff0033;
+    color: #00ff00;
+}
+
+.merch-buy {
+    display: flex;
+    justify-content: center;
+}
+
+.merch-buy button {
+    background-color: var(--light);
+    color: var(--primary);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: PoppinsBold, sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.merch-buy button:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slider-ltr {
+    animation: slide-left 40s linear infinite;
+}
+.slider-rtl {
+    animation: slide-right 40s linear infinite;
 }
 
 /* Media Queries */
@@ -289,30 +354,4 @@
         width: 100%;
         height: 600px;
     }
-}
-
-/* Animations */
-@keyframes slide-left {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes slide-right {
-    from {
-        transform: translateX(-50%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.slider-ltr {
-    animation: slide-left 40s linear infinite;
-}
-.slider-rtl {
-    animation: slide-right 40s linear infinite;
 }
