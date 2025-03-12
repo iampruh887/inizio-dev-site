@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./InsightArena.css";
-import "./InsightArena.css";
-
+import image_CG from "../assets/CG.png";
 // Import speaker images
 import amitImg from "../assets_team/assets_speakers/amit.jpg";
 import vandanaImg from "../assets_team/assets_speakers/vandana.jpg";
@@ -67,79 +66,79 @@ const InsightArena = () => {
 
   // Sample data for partners
   const partnerCards = [
-    { title: "SBI", image: "src/assets_team/assets_sponsors/SBI.jpg" },
-    { title: "GAIL", image: "src/assets_team/assets_sponsors/Gail.jpg" },
-    { title: "Arista", image: "src/assets_team/assets_sponsors/arista.jpg" },
+    { title: "SBI", image: "src/assets/assets_sponsors/SBI.jpg" },
+    { title: "GAIL", image: "src/assets/assets_sponsors/Gail.jpg" },
+    { title: "Arista", image: "src/assets/assets_sponsors/arista.jpg" },
     {
       title: "The Assam Tribune",
-      image: "src/assets_team/assets_sponsors/assam_tribune.jpg",
+      image: "src/assets/assets_sponsors/assam_tribune.jpg",
     },
-    { title: "BIPL", image: "src/assets_team/assets_sponsors/bipl.jpg" },
+    { title: "BIPL", image: "src/assets/assets_sponsors/bipl.jpg" },
     {
       title: "Baskin Robbins",
-      image: "src/assets_team/assets_sponsors/br.jpg",
+      image: "src/assets/assets_sponsors/br.jpg",
     },
     {
       title: "Canara Bank",
-      image: "src/assets_team/assets_sponsors/canara.jpg",
+      image: "src/assets/assets_sponsors/canara.jpg",
     },
-    { title: "Dominos", image: "src/assets_team/assets_sponsors/dominos.jpg" },
+    { title: "Dominos", image: "src/assets/assets_sponsors/dominos.jpg" },
     {
       title: "Fat Belly",
-      image: "src/assets_team/assets_sponsors/fat_belly.jpg",
+      image: "src/assets/assets_sponsors/fat_belly.jpg",
     },
-    { title: "G Plus", image: "src/assets_team/assets_sponsors/g_plus.jpg" },
+    { title: "G Plus", image: "src/assets/assets_sponsors/g_plus.jpg" },
     {
       title: "Gratia Technologies",
-      image: "src/assets_team/assets_sponsors/gratia.jpg",
+      image: "src/assets/assets_sponsors/gratia.jpg",
     },
     {
       title: "Bank of Baroda",
-      image: "src/assets_team/assets_sponsors/BOB.jpg",
+      image: "src/assets/assets_sponsors/BOB.jpg",
     },
     {
       title: "Indian Bank",
-      image: "src/assets_team/assets_sponsors/indian_bank.jpg",
+      image: "src/assets/assets_sponsors/indian_bank.jpg",
     },
     {
       title: "Indian Oil",
-      image: "src/assets_team/assets_sponsors/indian_oil.jpg",
+      image: "src/assets/assets_sponsors/indian_oil.jpg",
     },
     {
       title: "Kuber Techno Craft",
-      image: "src/assets_team/assets_sponsors/kuber.jpg",
+      image: "src/assets/assets_sponsors/kuber.jpg",
     },
-    { title: "NEHHDC", image: "src/assets_team/assets_sponsors/nehhdc.jpg" },
+    { title: "NEHHDC", image: "src/assets/assets_sponsors/nehhdc.jpg" },
     {
       title: "NGC Broadband",
-      image: "src/assets_team/assets_sponsors/ngc.jpg",
+      image: "src/assets/assets_sponsors/ngc.jpg",
     },
-    { title: "OIL India", image: "src/assets_team/assets_sponsors/OIL.jpg" },
+    { title: "OIL India", image: "src/assets/assets_sponsors/OIL.jpg" },
     {
       title: "Press Information Bureau",
-      image: "src/assets_team/assets_sponsors/pib.jpg",
+      image: "src/assets/assets_sponsors/pib.jpg",
     },
     {
       title: "Pizza Hut",
-      image: "src/assets_team/assets_sponsors/pizza_hut.jpg",
+      image: "src/assets/assets_sponsors/pizza_hut.jpg",
     },
     {
       title: "Prag News",
-      image: "src/assets_team/assets_sponsors/prag_news.jpg",
+      image: "src/assets/assets_sponsors/prag_news.jpg",
     },
     {
       title: "Royal Enfield",
-      image: "src/assets_team/assets_sponsors/royal_enfield.jpg",
+      image: "src/assets/assets_sponsors/royal_enfield.jpg",
     },
     {
       title: "Souled Store",
-      image: "src/assets_team/assets_sponsors/souled_store.jpg",
+      image: "src/assets/assets_sponsors/souled_store.jpg",
     },
     {
       title: "SP Singla Constructions",
-      image: "src/assets_team/assets_sponsors/sp_singla.jpg",
+      image: "src/assets/assets_sponsors/sp_singla.jpg",
     },
-    { title: "Zoomcar", image: "src/assets_team/assets_sponsors/zoomcar.jpg" },
+    { title: "Zoomcar", image: "src/assets/assets_sponsors/zoomcar.jpg" },
   ];
 
   const generateSliderContent = (cards, includeDescription = true) => {
@@ -203,7 +202,15 @@ const InsightArena = () => {
           </p>
         </div>
       </div>
-
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          paddingBottom: "30px",
+        }}
+      >
+        <img src={image_CG} style={{ marginTop: "-60px", width: "70%" }} />
+      </div>
       <div className="container">
         <div className="section">
           <div className="slider-container">
