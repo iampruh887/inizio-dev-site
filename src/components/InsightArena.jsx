@@ -2,6 +2,32 @@ import React, { useState, useEffect } from "react";
 import "./InsightArena.css";
 import image_CG from "../assets/CG.png";
 // Import speaker images
+import SBILogo from "../assets/assets_sponsors/SBI.jpg";
+import GailLogo from "../assets/assets_sponsors/Gail.jpg";
+import AristaLogo from "../assets/assets_sponsors/arista.jpg";
+import AssemTribuneLogo from "../assets/assets_sponsors/assam_tribune.jpg";
+import BIPLLogo from "../assets/assets_sponsors/bipl.jpg";
+import BRLogo from "../assets/assets_sponsors/br.jpg";
+import CanaraLogo from "../assets/assets_sponsors/canara.jpg";
+import DominosLogo from "../assets/assets_sponsors/dominos.jpg";
+import FatBellyLogo from "../assets/assets_sponsors/fat_belly.jpg";
+import GPlusLogo from "../assets/assets_sponsors/g_plus.jpg";
+import GratiaLogo from "../assets/assets_sponsors/gratia.jpg";
+import BOBLogo from "../assets/assets_sponsors/BOB.jpg";
+import IndianBankLogo from "../assets/assets_sponsors/indian_bank.jpg";
+import IndianOilLogo from "../assets/assets_sponsors/indian_oil.jpg";
+import KuberLogo from "../assets/assets_sponsors/kuber.jpg";
+import NEHHDCLogo from "../assets/assets_sponsors/nehhdc.jpg";
+import NGCLogo from "../assets/assets_sponsors/ngc.jpg";
+import OILLogo from "../assets/assets_sponsors/OIL.jpg";
+import PIBLogo from "../assets/assets_sponsors/pib.jpg";
+import PizzaHutLogo from "../assets/assets_sponsors/pizza_hut.jpg";
+import PragNewsLogo from "../assets/assets_sponsors/prag_news.jpg";
+import RoyalEnfieldLogo from "../assets/assets_sponsors/royal_enfield.jpg";
+import SouledStoreLogo from "../assets/assets_sponsors/souled_store.jpg";
+import SPSinglaLogo from "../assets/assets_sponsors/sp_singla.jpg";
+import ZoomcarLogo from "../assets/assets_sponsors/zoomcar.jpg";
+
 import amitImg from "../assets_team/assets_speakers/amit.jpg";
 import vandanaImg from "../assets_team/assets_speakers/vandana.jpg";
 import nirImg from "../assets_team/assets_speakers/nir.jpg";
@@ -66,79 +92,31 @@ const InsightArena = () => {
 
   // Sample data for partners
   const partnerCards = [
-    { title: "SBI", image: "src/assets/assets_sponsors/SBI.jpg" },
-    { title: "GAIL", image: "src/assets/assets_sponsors/Gail.jpg" },
-    { title: "Arista", image: "src/assets/assets_sponsors/arista.jpg" },
-    {
-      title: "The Assam Tribune",
-      image: "src/assets/assets_sponsors/assam_tribune.jpg",
-    },
-    { title: "BIPL", image: "src/assets/assets_sponsors/bipl.jpg" },
-    {
-      title: "Baskin Robbins",
-      image: "src/assets/assets_sponsors/br.jpg",
-    },
-    {
-      title: "Canara Bank",
-      image: "src/assets/assets_sponsors/canara.jpg",
-    },
-    { title: "Dominos", image: "src/assets/assets_sponsors/dominos.jpg" },
-    {
-      title: "Fat Belly",
-      image: "src/assets/assets_sponsors/fat_belly.jpg",
-    },
-    { title: "G Plus", image: "src/assets/assets_sponsors/g_plus.jpg" },
-    {
-      title: "Gratia Technologies",
-      image: "src/assets/assets_sponsors/gratia.jpg",
-    },
-    {
-      title: "Bank of Baroda",
-      image: "src/assets/assets_sponsors/BOB.jpg",
-    },
-    {
-      title: "Indian Bank",
-      image: "src/assets/assets_sponsors/indian_bank.jpg",
-    },
-    {
-      title: "Indian Oil",
-      image: "src/assets/assets_sponsors/indian_oil.jpg",
-    },
-    {
-      title: "Kuber Techno Craft",
-      image: "src/assets/assets_sponsors/kuber.jpg",
-    },
-    { title: "NEHHDC", image: "src/assets/assets_sponsors/nehhdc.jpg" },
-    {
-      title: "NGC Broadband",
-      image: "src/assets/assets_sponsors/ngc.jpg",
-    },
-    { title: "OIL India", image: "src/assets/assets_sponsors/OIL.jpg" },
-    {
-      title: "Press Information Bureau",
-      image: "src/assets/assets_sponsors/pib.jpg",
-    },
-    {
-      title: "Pizza Hut",
-      image: "src/assets/assets_sponsors/pizza_hut.jpg",
-    },
-    {
-      title: "Prag News",
-      image: "src/assets/assets_sponsors/prag_news.jpg",
-    },
-    {
-      title: "Royal Enfield",
-      image: "src/assets/assets_sponsors/royal_enfield.jpg",
-    },
-    {
-      title: "Souled Store",
-      image: "src/assets/assets_sponsors/souled_store.jpg",
-    },
-    {
-      title: "SP Singla Constructions",
-      image: "src/assets/assets_sponsors/sp_singla.jpg",
-    },
-    { title: "Zoomcar", image: "src/assets/assets_sponsors/zoomcar.jpg" },
+    { title: "SBI", image: SBILogo },
+    { title: "GAIL", image: GailLogo },
+    { title: "Arista", image: AristaLogo },
+    { title: "The Assam Tribune", image: AssemTribuneLogo },
+    { title: "BIPL", image: BIPLLogo },
+    { title: "Baskin Robbins", image: BRLogo },
+    { title: "Canara Bank", image: CanaraLogo },
+    { title: "Dominos", image: DominosLogo },
+    { title: "Fat Belly", image: FatBellyLogo },
+    { title: "G Plus", image: GPlusLogo },
+    { title: "Gratia Technologies", image: GratiaLogo },
+    { title: "Bank of Baroda", image: BOBLogo },
+    { title: "Indian Bank", image: IndianBankLogo },
+    { title: "Indian Oil", image: IndianOilLogo },
+    { title: "Kuber Techno Craft", image: KuberLogo },
+    { title: "NEHHDC", image: NEHHDCLogo },
+    { title: "NGC Broadband", image: NGCLogo },
+    { title: "OIL India", image: OILLogo },
+    { title: "Press Information Bureau", image: PIBLogo },
+    { title: "Pizza Hut", image: PizzaHutLogo },
+    { title: "Prag News", image: PragNewsLogo },
+    { title: "Royal Enfield", image: RoyalEnfieldLogo },
+    { title: "Souled Store", image: SouledStoreLogo },
+    { title: "SP Singla Constructions", image: SPSinglaLogo },
+    { title: "Zoomcar", image: ZoomcarLogo },
   ];
 
   const generateSliderContent = (cards, includeDescription = true) => {
