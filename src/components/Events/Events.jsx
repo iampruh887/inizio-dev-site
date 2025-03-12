@@ -11,23 +11,27 @@ const events_hero_desc =
 
 const eventsData = [
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "IPL Auction 2.0: The Ultimate Strategy Challenge!",
+    text: "Gear up for an electrifying event at IIIT’s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players (4 batsmen, 4 bowlers, 2 all-rounders, 1 wicket-keeper, and 1 impact player) while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!",
     image:
-      "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
-    no: "#001",
+      "https://bsmedia.business-standard.com/_media/bs/img/article/2023-12/12/full/1702358133-3099.jpg?im=FeatureCrop,size=(826,465)",
+    no: "#420",
   },
   {
-    text: "Another amazing event happening soon!",
-    image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
-    no: "#002",
+    title: "Digital-Duel Challenge: Master the Art of Marketing!",
+    text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards! Ready to duel? Join the challenge and prove your marketing prowess!",
+    image: "https://promoalltest-blog.cdnpromo.com/wp-content/uploads/2022/12/OG-Social-Media-Trends-You-Need-to-Know-About-for-2023.jpg",
+    no: "#652",
   },
   {
+    title: "Title 3",
     text: "Don't miss this exclusive session!",
     image:
       "https://s3-alpha-sig.figma.com/img/5fc9/de02/f616f3f264ec4af556c66633956d3b06?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=by6nXD8pEtcJ7yehsxcWcpqsIpbOhUH3Hc6n9ly0H9Nv-aIQLpmyEWeIG7Ksnsc15EienM7jWeO32Ul2l26yrL5wJdFbO6Z83YqukRi-HkNenSPb0KmELiLqY1XnXlCdQezswOqjlCU49qOUIDJiBb3G~Pwmous8UU1cZoDnWlSYjNoAel6Y5DwqHFC7mlkp0w7kqR0DkXMXBp2qERZmyu3gzXbbj~EbItZ4g6BdtUxqFcjq1xRhxPvynw9cKfRa2CxINxs9oBX3SBuByaWDkUWEZpVZHXEv3Ya7TTtCqTf6eSBJdM3gCX8vkIGOnTtG~TlYRUj2vcozPNgzFiMhpA__",
     no: "#003",
   },
   {
+    title: "Title 4",
     text: "Final event details here, be ready!",
     image: "https://i.ytimg.com/vi/UVlI07Yjov4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDeQTuU9lrvj-eXLk3g6nJwele9A",
     no: "#004",
@@ -39,6 +43,7 @@ const EventCard = ({ currentEvent }) => {
     <AnimatePresence mode="wait">
       <div className="Event-container  flex justify-center gap-6 py-10 bg-yellow-100">
         <div className="rectangle bg-gray-700 text-white p-6 max-w-md">
+          <span class="event-title">{eventsData[currentEvent].title}</span>
           <p className="event-description">{eventsData[currentEvent].text}</p>
           <p className="Event_event">@event</p>
           <span className="hash-001">{eventsData[currentEvent].no}</span>
