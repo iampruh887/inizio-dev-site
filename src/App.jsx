@@ -9,7 +9,7 @@ import Body from "./components_team/Body";
 import Footer from "./components_team/Footer";
 import Team from "./assets_team/skull.png";
 import Background from "./components_team/Background"; // Import the Background component
-
+import Contact from "./components/ContactForm";
 function App() {
   return (
     <Router>
@@ -39,6 +39,7 @@ function App() {
                     {/* <Route path="/Home" element={<Home />} /> */}
                     <Route path="/Events" element={<Events />} />
                     <Route path="/Sponsors" element={<Sponsors />} />
+                    <Route path="/contact" element={<Contact />} />
                   </Routes>
                 </>
               }

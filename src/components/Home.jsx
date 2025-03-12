@@ -8,8 +8,6 @@ import m1_back from "../assets/m1_back.jpeg";
 import m2_back from "../assets/m2_back.jpeg";
 import InsightArena from "../components/InsightArena";
 import img_2025 from "../assets/2025.png";
-// import Backgroung from "../components_team/Background";
-// import Background from "../components_team/Background";
 
 function Home() {
   const [merchImages, setMerchImages] = useState([
@@ -30,27 +28,28 @@ function Home() {
     },
   ]);
 
-  // Add this handler function
-  const handleImageFlip = (index) => {
+  const [enlargedImage, setEnlargedImage] = useState(null);
+
+  const handleImageFlip = (index, e) => {
+    e.stopPropagation();
     setMerchImages(
       merchImages.map((merch, i) =>
         i === index ? { ...merch, isFlipped: !merch.isFlipped } : merch,
       ),
     );
   };
+
+  const handleImageClick = (index) => {
+    setEnlargedImage(enlargedImage === index ? null : index);
+  };
+
   return (
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>INIZIO - 25</title>
       <link rel="stylesheet" href="style.css" />
-      {/* <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossOrigin="anonymous"
-        referrerPolicy="no-referrer"
-      /> */}
+
       <section>
         <>
           <div style={{ textAlign: "center", marginBottom: "40px" }}>
@@ -123,7 +122,7 @@ function Home() {
                   marginBottom: "15px",
                 }}
               >
-                IIITG’s First Independent E-Summit — A launchpad for
+                IIITG's First Independent E-Summit — A launchpad for
                 entrepreneurs, tech enthusiasts, and visionaries.
                 <br />
                 <b>
@@ -195,16 +194,15 @@ function Home() {
                   </div>
                   <div className="text-cont">
                     <div className="head-des">
-                      INIZIO 2025, IIITG’S FIRST INDEPENDENT E-SUMMIT, HAPPENING
+                      INIZIO 2025, IIITG'S FIRST INDEPENDENT E-SUMMIT, HAPPENING
                       ON 29TH MARCH 2025!
                     </div>
                     <div className="para">
                       <p>
-                        {" "}
                         A melting pot of entrepreneurs, tech pioneers, industry
                         leaders, and investors, INIZIO is designed to spark
                         game-changing ideas, foster collaborations, and propel
-                        startups to new heights. Whether you’re looking to pitch
+                        startups to new heights. Whether you're looking to pitch
                         your next big idea, gain insights from visionary
                         speakers, or connect with like-minded innovators, this
                         summit is your ultimate launchpad.
@@ -216,7 +214,7 @@ function Home() {
                         experience. Dive into discussions on the latest industry
                         trends, engage in thought-provoking panels, and seize
                         the chance to interact with investors and mentors who
-                        can fuel your journey. If you’re an aspiring
+                        can fuel your journey. If you're an aspiring
                         entrepreneur, a tech enthusiast, or simply someone who
                         thrives on innovation, this is where your future begins!
                       </p>
@@ -245,7 +243,7 @@ function Home() {
                       groundbreaking ideas take center stage. This is where
                       startups pitch their visions, industry leaders share
                       transformative insights, and innovators spark discussions
-                      that shape the future. Whether you’re an aspiring
+                      that shape the future. Whether you're an aspiring
                       entrepreneur, a tech enthusiast, or a business strategist,
                       this space is designed to fuel your curiosity and expand
                       your knowledge. From high-energy panel discussions and
@@ -262,12 +260,12 @@ function Home() {
               style={{ maxWidth: "900px", margin: "0 auto", marginTop: 120 }}
             >
               <EventCard
-                title="Event 01"
-                description="Where ideas collide and opportunities emerge!"
+                title="IPL Auction 2.0"
+                description="Join the thrill and show your cricket genius!"
               />
               <EventCard
-                title="Event 02"
-                description="Where ideas collide and opportunities emerge!"
+                title="Digital-Duel Challenge"
+                description="Join the challenge and prove your marketing prowess!"
                 reversed={true}
               />
             </div>
@@ -310,20 +308,29 @@ function Home() {
                     <div className="merch" key={index}>
                       <div className="merch-outline">
                         <div
-                          className={`merch-img-container ${merch.isFlipped ? "flipped" : ""}`}
-                          onClick={() => handleImageFlip(index)}
+                          className={`merch-img-container ${
+                            merch.isFlipped ? "flipped" : ""
+                          } ${enlargedImage === index ? "enlarged" : ""}`}
                         >
+                          <button
+                            className="click-me-button"
+                            onClick={(e) => handleImageFlip(index, e)}
+                          >
+                            Click to Flip!
+                          </button>
                           <div
                             className="merch-img-front"
                             style={{
                               backgroundImage: `url(${merch.frontImage})`,
                             }}
+                            onClick={() => handleImageClick(index)}
                           />
                           <div
                             className="merch-img-back"
                             style={{
                               backgroundImage: `url(${merch.backImage})`,
                             }}
+                            onClick={() => handleImageClick(index)}
                           />
                         </div>
                       </div>
@@ -346,6 +353,10 @@ function Home() {
                   ))}
                 </div>
               </div>
+              <div
+                className={`overlay ${enlargedImage !== null ? "active" : ""}`}
+                onClick={() => setEnlargedImage(null)}
+              />
             </div>
 
             <InsightArena />
