@@ -527,25 +527,19 @@ export default function Body() {
   return (
     <div className="bg-[#FFF5Cf] w-full sm:w-[85%] sm:rounded-tr-3xl sm:rounded-br-3xl p-8 mb-[100px]">
       {/* Core Team */}
-      <TeamInfo
-        team_name="core team !!"
-        team_description="Lorem ipsum dolor sit amet sin quint usum. Proin gravi daibhe lesorem quis"
-      >
+      <TeamInfo team_name="core team !!" team_description="The Masterminds">
         {renderTeamCards(coreTeamMembers)}
       </TeamInfo>
 
       {/* Technical Team */}
-      <TeamInfo
-        team_name="tech team !!"
-        team_description="Lorem ipsum dolor sit amet sin quint usum. Proin gravi daibhe lesorem quis"
-      >
+      <TeamInfo team_name="tech team !!" team_description="The Digital Wizards">
         {renderTeamCards(techTeamMembers)}
       </TeamInfo>
 
       {/* Marketing Team */}
       <TeamInfo
         team_name="marketing team !!"
-        team_description="Lorem ipsum dolor sit amet sin quint usum. Proin gravi daibhe lesorem quis"
+        team_description="The Hype Architects"
       >
         {renderTeamCards(marketingTeamMembers)}
       </TeamInfo>
@@ -553,9 +547,7 @@ export default function Body() {
       {/* Event Management Team */}
       <TeamInfo
         team_name="event management team !!"
-        team_description="From coordinating schedules to ensuring that every session runs smoothly, the Event
-          Management Team is the powerhouse behind the execution of our summit. They are the planners, problem-solvers,
-           and crisis managers who ensure that every attendee has an experience to remember."
+        team_description="The Chaos Tamers"
       >
         {renderTeamCards(emTeamMembers)}
       </TeamInfo>
@@ -563,10 +555,7 @@ export default function Body() {
       {/* Public & Corporate relations Team */}
       <TeamInfo
         team_name="public & corporate relations team !!"
-        team_description="The voice of our event, the Public Relations Team, ensures that our message reaches the
-          right people at the right time. They manage communication, handle media relations, and create impactful
-          narratives that position our summit as a must-attend experience for entrepreneurs, innovators, and leaders
-          alike"
+        team_description="The Bridge Builders"
       >
         {renderTeamCards(pcrTeamMembers)}
       </TeamInfo>
@@ -574,10 +563,7 @@ export default function Body() {
       {/* sponsorship Team */}
       <TeamInfo
         team_name="sponsorship team !!"
-        team_description="Opportunities don’t just happen; they are created by our Sponsorship Team. They work
-          tirelessly to bring in valuable partnerships, secure funding, and build meaningful collaborations that take
-          our event to the next level. Their efforts help us provide the best resources, experiences, and opportunities
-           for our audience."
+        team_description="The Deal Makers"
       >
         {renderTeamCards(sponsorTeamMembers)}
       </TeamInfo>

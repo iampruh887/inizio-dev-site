@@ -9,7 +9,7 @@ import Hero from "../Hero";
 const Sponsors = () => {
   return (
     <div className="relative">
-      <Hero title="Sponsors" desc="..." />
+      <Hero title="Sponsors" desc="" />
       <div className="relative z-20 mt-[-100px]">
         <main className="sponsors__content">
           {Object.values(SPONSOR_TYPES).map(({ title, sponsors }) => (
