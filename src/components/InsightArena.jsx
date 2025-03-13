@@ -187,7 +187,10 @@ const InsightArena = () => {
           paddingBottom: "30px",
         }}
       >
-        <img src={image_CG} style={{ marginTop: "-60px", width: "70%" }} />
+        <img
+          src={image_CG}
+          style={{ marginTop: "-60px", width: "70%", paddingRight: "200px" }}
+        />
       </div>
       <div className="container">
         <div className="section">
