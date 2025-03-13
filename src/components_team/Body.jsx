@@ -4,7 +4,7 @@ import TeamCard from "./TeamCard";
 import skull from "../assets_team/skull.png";
 
 const memberImages = {};
-const images = import.meta.glob("../assets_team/member_imgs/*.jpg", {
+const images = import.meta.glob("../assets_team/member_imgs/*.webp", {
   eager: true,
 });
 Object.entries(images).forEach(([path, module]) => {
@@ -21,7 +21,7 @@ export default function Body() {
       instaUrl: "instagram.com",
       linkedinUrl: "linkedin.com",
       phone: "1234567890",
-      image: memberImages["fest head.jpg"],
+      image: memberImages["fest head.webp"],
     },
     {
       name: "Abhiraj Tomar",
@@ -30,7 +30,7 @@ export default function Body() {
         "https://www.instagram.com/abhiraj_tomar02?igsh=ZnZibXJoZnVzdnhp",
       linkedinUrl: "https://www.linkedin.com/in/abhiraj-tomar-52a260236",
       phone: "9205454265",
-      image: memberImages["em (1).jpg"],
+      image: memberImages["em (1).webp"],
     },
     {
       name: "Chiranjit Saha",
@@ -38,7 +38,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/rising_sun_cs/",
       linkedinUrl: "www.linkedin.com/in/chiranjit-saha-a3bba5230",
       phone: "8620870598",
-      image: memberImages["pcr (1).jpg"],
+      image: memberImages["pcr (1).webp"],
     },
     {
       name: "Kartik Sehgal",
@@ -46,7 +46,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/kartiksehgal_2004/",
       linkedinUrl: "https://www.linkedin.com/in/kartik-sehgal-b84088259/",
       phone: "9530590415",
-      image: memberImages["sponsor (2).jpg"],
+      image: memberImages["sponsor (2).webp"],
     },
     {
       name: "Nishant Prabhat",
@@ -54,7 +54,7 @@ export default function Body() {
       instaUrl: "http://instagram.com/a13xv0rd3n",
       linkedinUrl: "http://linkedin.com/in/nishant-prabhat",
       phone: "8179642563",
-      image: memberImages["tech (14).jpg"],
+      image: memberImages["tech (14).webp"],
     },
     {
       name: "Prince Kumar",
@@ -62,7 +62,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["marketing (8).jpg"],
+      image: memberImages["marketing (8).webp"],
     },
     {
       name: "Swastika Khan",
@@ -71,7 +71,7 @@ export default function Body() {
       linkedinUrl:
         "https://www.linkedin.com/in/swastika-khan-19271a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       phone: "7890153673",
-      image: memberImages["tech (9).jpg"],
+      image: memberImages["tech (9).webp"],
     },
   ];
 
@@ -82,7 +82,7 @@ export default function Body() {
       instaUrl: "http://instagram.com/a13xv0rd3n",
       linkedinUrl: "http://linkedin.com/in/nishant-prabhat",
       phone: "8179642563",
-      image: memberImages["tech (14).jpg"],
+      image: memberImages["tech (14).webp"],
     },
     {
       name: "Swastika Khan",
@@ -91,7 +91,7 @@ export default function Body() {
       linkedinUrl:
         "https://www.linkedin.com/in/swastika-khan-19271a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       phone: "7890153673",
-      image: memberImages["tech (9).jpg"],
+      image: memberImages["tech (9).webp"],
     },
     {
       name: "Prithvi Raj",
@@ -107,7 +107,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/alok41769",
       linkedinUrl: "https://in.linkedin.com/in/alok-vishwakarma-52937b327",
       phone: "9044419516",
-      image: memberImages["tech (7).jpg"],
+      image: memberImages["tech (7).webp"],
     },
     {
       name: "Ansik Singh Tomar",
@@ -115,7 +115,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/aanshiq_singh?igsh=YTY2dTJoOXV4Nm5j",
       linkedinUrl: "https://www.linkedin.com/in/aanshik-singh-tomar-506690279/",
       phone: "8822630829",
-      image: memberImages["tech (5).jpg"],
+      image: memberImages["tech (5).webp"],
     },
     {
       name: "Anuved Pratap Singh",
@@ -140,7 +140,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["tech (3).jpg"],
+      image: memberImages["tech (3).webp"],
     },
     {
       name: "L Vishnu Vardhan",
@@ -148,7 +148,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["tech (1).jpg"],
+      image: memberImages["tech (1).webp"],
     },
     {
       name: "Pradyumn Ojha",
@@ -164,7 +164,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/prince_rxj",
       linkedinUrl: "https://www.linkedin.com/in/prince-raj-38aa32355",
       phone: "7644909627",
-      image: memberImages["tech (2).jpg"],
+      image: memberImages["tech (2).webp"],
     },
     {
       name: "Riya Badhani",
@@ -172,7 +172,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["tech (8).jpg"],
+      image: memberImages["tech (8).webp"],
     },
     {
       name: "Shreyas Satish S",
@@ -180,7 +180,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/shreyasiota/",
       linkedinUrl: "https://www.linkedin.com/in/shreyas-satish-638963325/",
       phone: "6362789478",
-      image: memberImages["tech (4).jpg"],
+      image: memberImages["tech (4).webp"],
     },
     {
       name: "Soumil Khanna",
@@ -189,7 +189,7 @@ export default function Body() {
       linkedinUrl:
         "https://www.linkedin.com/in/soumil-khanna-a46863213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       phone: "8810658646",
-      image: memberImages["tech (12).jpg"],
+      image: memberImages["tech (12).webp"],
     },
     {
       name: "Tanishk Gupta",
@@ -197,7 +197,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["tech (6).jpg"],
+      image: memberImages["tech (6).webp"],
     },
   ];
 
@@ -208,7 +208,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["marketing (8).jpg"],
+      image: memberImages["marketing (8).webp"],
     },
     {
       name: "Divyanshi Jaiswal",
@@ -216,7 +216,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/__divyanshi_8",
       linkedinUrl: "https://www.linkedin.com/in/divyanshi-jaiswal-53a157326",
       phone: "7079278901",
-      image: memberImages["marketing (1).jpg"],
+      image: memberImages["marketing (1).webp"],
     },
     {
       name: "Disha Khakha",
@@ -235,7 +235,7 @@ export default function Body() {
       linkedinUrl:
         "https://www.linkedin.com/in/sree-praneeth-guthikonda-a02601311",
       phone: "7396854129",
-      image: memberImages["marketing (2).jpg"],
+      image: memberImages["marketing (2).webp"],
     },
     {
       name: "Harsh Brijesh Dubey",
@@ -243,7 +243,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/_.harsh.33._",
       linkedinUrl: "https://www.linkedin.com/in/hxrshthetic",
       phone: "9580010704",
-      image: memberImages["marketing (3).jpg"],
+      image: memberImages["marketing (3).webp"],
     },
     {
       name: "Harshu Prasad Shukla",
@@ -251,7 +251,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/harshu.visuals",
       linkedinUrl: "https://in.linkedin.com/in/harshu-prasad-shukla-0aa6a8351",
       phone: "9324189494",
-      image: memberImages["marketing (4).jpg"],
+      image: memberImages["marketing (4).webp"],
     },
     {
       name: "Mohit Soni",
@@ -259,7 +259,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/mohitsoni_2/",
       linkedinUrl: "www.linkedin.com/in/mohit-soni-211177271",
       phone: "7878683216",
-      image: memberImages["marketing (5).jpg"],
+      image: memberImages["marketing (5).webp"],
     },
     {
       name: "Shubham Kanojiya",
@@ -280,7 +280,7 @@ export default function Body() {
         "https://www.instagram.com/abhiraj_tomar02?igsh=ZnZibXJoZnVzdnhp",
       linkedinUrl: "https://www.linkedin.com/in/abhiraj-tomar-52a260236",
       phone: "9205454265",
-      image: memberImages["em (1).jpg"],
+      image: memberImages["em (1).webp"],
     },
     {
       name: "Abhinav Pratap",
@@ -306,7 +306,7 @@ export default function Body() {
         "https://www.instagram.com/anshu_singh_0503?igsh=MW5ha2pzcXp0MXdiOA==",
       linkedinUrl: "https://www.linkedin.com/in/anshu-priya-173311333",
       phone: "7979864746",
-      image: memberImages["em (9).jpg"],
+      image: memberImages["em (9).webp"],
     },
     {
       name: "Ashish Sinha",
@@ -315,7 +315,7 @@ export default function Body() {
         "https://www.instagram.com/ashish_sinha_31?igsh=bGQxdHY4cXpvOHpz",
       linkedinUrl: "https://www.linkedin.com/in/ashish-sinha-283667328",
       phone: "8318895695",
-      image: memberImages["em (7).jpg"],
+      image: memberImages["em (7).webp"],
     },
     {
       name: "Akshat Keshri",
@@ -342,7 +342,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/kvshagra",
       linkedinUrl: "https://www.linkedin.com/in/kushagra-mishra-040212328",
       phone: "8448726620",
-      image: memberImages["em (6).jpg"],
+      image: memberImages["em (6).webp"],
     },
     {
       name: "Madhav Raj Goyal",
@@ -350,7 +350,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/mav_977?igsh=MXNmNnF1cjd4cGEzMA==",
       linkedinUrl: "https://in.linkedin.com/in/madhav-raj-goyal-98b225326",
       phone: "8788117282",
-      image: memberImages["em (2).jpg"],
+      image: memberImages["em (2).webp"],
     },
     {
       name: "Prachi Priya",
@@ -359,7 +359,7 @@ export default function Body() {
         "https://www.instagram.com/prachipriya__1234?igsh=MWN3aGZyZDBmcGJvbA==",
       linkedinUrl: "https://www.linkedin.com/in/prachi-priya-b46156326",
       phone: "6391814536",
-      image: memberImages["em (3).jpg"],
+      image: memberImages["em (3).webp"],
     },
     {
       name: "Sai Yuvraj Bhegde",
@@ -367,7 +367,7 @@ export default function Body() {
       instaUrl: "None",
       linkedinUrl: "https://www.linkedin.com/in/sai-bhegde-b3481a312",
       phone: "9004683346",
-      image: memberImages["em (5).jpg"],
+      image: memberImages["em (5).webp"],
     },
     {
       name: "Saurabh Bhagwat",
@@ -375,7 +375,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/lancelot_4306",
       linkedinUrl: "https://www.linkedin.com/in/saurabh-bhagwat-9b951a313",
       phone: "9226727113",
-      image: memberImages["em (8).jpg"],
+      image: memberImages["em (8).webp"],
     },
     {
       name: "Vedanshi Aryan",
@@ -383,7 +383,7 @@ export default function Body() {
       instaUrl: "",
       linkedinUrl: "",
       phone: "",
-      image: memberImages["em (4).jpg"],
+      image: memberImages["em (4).webp"],
     },
   ];
 
@@ -402,7 +402,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/rising_sun_cs/",
       linkedinUrl: "www.linkedin.com/in/chiranjit-saha-a3bba5230",
       phone: "8620870598",
-      image: memberImages["pcr (1).jpg"],
+      image: memberImages["pcr (1).webp"],
     },
     {
       name: "A S Bhavya Priya",
@@ -410,7 +410,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/asbp_._?igsh=YjZ0YzYwd3NmNnBx",
       linkedinUrl: "https://www.linkedin.com/in/a-s-bhavya-priya-487879341",
       phone: "6303031936",
-      image: memberImages["pcr (6).jpg"],
+      image: memberImages["pcr (6).webp"],
     },
     {
       name: "Afreen Nesha",
@@ -419,7 +419,7 @@ export default function Body() {
         "https://www.instagram.com/_afreeeennn_?igsh=MWx3MGh6YXh0NHY0aQ==",
       linkedinUrl: "https://www.linkedin.com/in/afreen-nesha-21a77631b",
       phone: "7432820622",
-      image: memberImages["pcr (5).jpg"],
+      image: memberImages["pcr (5).webp"],
     },
     {
       name: "Anvesha Ayushi",
@@ -428,7 +428,7 @@ export default function Body() {
         "https://www.instagram.com/anveshaayushi?igsh=MWN6djNqeTNlYmcwYQ==",
       linkedinUrl: "https://www.linkedin.com/in/anvesha-ayushi-548688355",
       phone: "9667727229",
-      image: memberImages["pcr (4).jpg"],
+      image: memberImages["pcr (4).webp"],
     },
     {
       name: "Aryan Sanjay Singh",
@@ -436,7 +436,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/okaryah?igsh=MTZyc2EwaG15YzFp",
       linkedinUrl: "https://in.linkedin.com/in/aryan-singh-b5636b284",
       phone: "6350401614",
-      image: memberImages["pcr (8).jpg"],
+      image: memberImages["pcr (8).webp"],
     },
     {
       name: "Kamireddy Hema Hasini",
@@ -444,7 +444,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/hasini_0604?igsh=eXl5MzhxYjlwMjQy",
       linkedinUrl: "http://linkedin.com/in/hema-hasini-076208324",
       phone: "9063733445",
-      image: memberImages["pcr (3).jpg"],
+      image: memberImages["pcr (3).webp"],
     },
     {
       name: "Kausik Vaibhav Patra",
@@ -453,7 +453,7 @@ export default function Body() {
       linkedinUrl:
         "https://www.linkedin.com/in/kausik-vaibhav-patra-b999071b3/",
       phone: "8018685525",
-      image: memberImages["pcr (9).jpg"],
+      image: memberImages["pcr (9).webp"],
     },
     {
       name: "Sanjana Kumari",
@@ -461,7 +461,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/sanjanamehta660/",
       linkedinUrl: "https://www.linkedin.com/in/sanjana-kumari-244107325/",
       phone: "08797123442",
-      image: memberImages["pcr (7).jpg"],
+      image: memberImages["pcr (7).webp"],
     },
     {
       name: "Siddhesh Singh",
@@ -470,7 +470,7 @@ export default function Body() {
         "https://www.instagram.com/_siddheshsingh?igsh=cGloMnU5azZpZHh0",
       linkedinUrl: "https://www.linkedin.com/in/siddhesh-singh-1463a1312",
       phone: "7506087629",
-      image: memberImages["pcr (2).jpg"],
+      image: memberImages["pcr (2).webp"],
     },
   ];
 
@@ -481,7 +481,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/kartiksehgal_2004/",
       linkedinUrl: "https://www.linkedin.com/in/kartik-sehgal-b84088259/",
       phone: "9530590415",
-      image: memberImages["sponsor (2).jpg"],
+      image: memberImages["sponsor (2).webp"],
     },
     {
       name: "Anmol Kumar",
@@ -490,7 +490,7 @@ export default function Body() {
         "https://www.instagram.com/anmol_1308?igsh=MWQ2Z2cxeXF0MzMyMA==",
       linkedinUrl: "https://www.linkedin.com/in/anmol-kumar-0ab054323",
       phone: "9313053313",
-      image: memberImages["sponsor (1).jpg"],
+      image: memberImages["sponsor (1).webp"],
     },
     {
       name: "Anmol Kumar",
