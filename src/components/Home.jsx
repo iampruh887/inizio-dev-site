@@ -8,6 +8,7 @@ import m1_back from "../assets/m1_back.jpeg";
 import m2_back from "../assets/m2_back.jpeg";
 import InsightArena from "../components/InsightArena";
 import img_2025 from "../assets/2025.png";
+import magnifier from "../assets/magnifier.png";
 
 function Home() {
   const [merchImages, setMerchImages] = useState([
@@ -307,14 +308,21 @@ function Home() {
                   {merchImages.map((merch, index) => (
                     <div className="merch" key={index}>
                       <div className="merch-outline">
-                        <div className={`merch-img-container`}>
+                        <div 
+                          className={`merch-img-container`}
+                          onClick={(e) => handleImageFlip(index, e)}
+                        >
                           {/* Single button that stays in place */}
                           <button
                             className="click-me-button"
-                            onClick={(e) => handleImageFlip(index, e)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleImageFlip(index, e);
+                            }}
                           >
                             Click to Flip!
                           </button>
+
                           {/* Wrapper that handles the flip */}
                           <div
                             className={`merch-img-wrapper ${merch.isFlipped ? "flipped" : ""}`}
@@ -324,15 +332,29 @@ function Home() {
                               style={{
                                 backgroundImage: `url(${merch.frontImage})`,
                               }}
-                              onClick={() => handleImageClick(merch.frontImage)}
-                            />
+                            >
+                              <button
+                                className={`magnifier-button ${merch.isFlipped ? "flipped" : ""}`}
+                                onClick={() => handleImageClick(merch.frontImage)}
+                              >
+                                <img className="magnifier" src={magnifier} ></img>
+                              </button>
+                            </div>
+                              
                             <div
                               className="merch-img-back"
                               style={{
                                 backgroundImage: `url(${merch.backImage})`,
                               }}
-                              onClick={() => handleImageClick(merch.backImage)}
-                            />
+                            >
+                              <button
+                                  className={`magnifier-button ${merch.isFlipped ? "flipped" : ""}`}
+                                  onClick={() => handleImageClick(merch.backImage)}
+                                >
+                                  <img className="magnifier" src={magnifier} ></img>
+                                </button>
+                              </div>
+                              
                           </div>
                         </div>
                       </div>

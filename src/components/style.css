@@ -198,6 +198,34 @@
     transform: scale(1.1);
 }
 
+.magnifier-button{
+    position: absolute;
+    bottom: 50px;
+    right: 15px;
+    height:40px;
+    width: 40px;
+    z-index: 5;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000px;
+}
+
+.magnifier{
+    width: 25px;
+    height: 25px;
+}
+
+.magnifier-button.flipped{
+    /*transform: rotateY(180deg);*/
+    bottom: 50px;
+    right: 15px;
+}
+
+
 /* Merch data styles */
 .merch-data {
     padding: 0 25px;
