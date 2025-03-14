@@ -276,11 +276,19 @@
 }
 
 .slider-ltr {
-    animation: slide-left 20s linear infinite;
+    animation: slide-left 40s linear infinite !important;
 }
 
 .slider-rtl {
-    animation: slide-right 20s linear infinite;
+    animation: slide-right 40s linear infinite !important;
+}
+
+.partner-slider-ltr {
+    animation: slide-left 60s linear infinite !important;
+}
+
+.partner-slider-rtl {
+    animation: slide-right 60s linear infinite !important;
 }
 
 @keyframes slide-left {

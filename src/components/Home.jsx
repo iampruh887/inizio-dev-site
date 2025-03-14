@@ -86,13 +86,15 @@ function Home() {
             style={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-evenly",
+              justifyContent: "right",
               gap: "200px",
               flexWrap: "wrap",
               paddingBottom: "25px",
+              position: "relative",
             }}
           >
             <div
+              className="side-popup"
               style={{
                 backgroundColor: "#FFF5CF",
                 borderRadius: "15px",
@@ -100,6 +102,9 @@ function Home() {
                 width: "45%",
                 maxWidth: "400px",
                 fontFamily: "'Outfit', sans-serif",
+                position: "absolute",
+                bottom: "38px",
+                left: "50px",
               }}
             >
               <h2
@@ -154,6 +159,7 @@ function Home() {
               <img
                 src={img_2025}
                 alt="2025"
+                className="img-2025"
                 style={{
                   width: "100%",
                   height: "auto",

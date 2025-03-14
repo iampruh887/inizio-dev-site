@@ -233,17 +233,17 @@ const InsightArena = () => {
         <div className="container">
           <div className="section">
             <div className="slider-container">
-              <div className="slider slider-ltr">
+              <div className="slider partner-slider-ltr">
                 {generateSliderContent_power(partnerCards, false)}
               </div>
             </div>
             <div className="slider-container">
-              <div className="slider slider-rtl">
+              <div className="slider partner-slider-rtl">
                 {generateSliderContent_power(partnerCards, false)}
               </div>
             </div>
             <div className="slider-container">
-              <div className="slider slider-ltr">
+              <div className="slider partner-slider-ltr">
                 {generateSliderContent_power(partnerCards, false)}
               </div>
             </div>

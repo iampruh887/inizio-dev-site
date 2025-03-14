@@ -159,6 +159,7 @@
     line-height: 1;
     white-space: nowrap;
     transition: all 0.1s ease-in-out;
+    margin-top: 0px !important;
 }
 
 .Landing_headline-l {
