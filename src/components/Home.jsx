@@ -73,6 +73,7 @@ function Home() {
                 letterSpacing: "2px",
                 textTransform: "uppercase",
                 margin: 0,
+                lineHeight: "1",
               }}
             >
               INNOVATION
