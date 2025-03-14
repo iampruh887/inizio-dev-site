@@ -50,7 +50,7 @@ function Home() {
 
       <section>
         <>
-          <div style={{ textAlign: "center", marginBottom: "40px" }}>
+          <div style={{ textAlign: "center", marginBottom: "40px", marginTop: "145px", }}>
             <h1
               style={{
                 fontSize: "clamp(3rem, 10vw, 7rem)",
@@ -60,6 +60,7 @@ function Home() {
                 letterSpacing: "2px",
                 textTransform: "uppercase",
                 margin: 0,
+                lineHeight: "1",
               }}
             >
               THE GENESIS OF
