@@ -78,6 +78,8 @@
 }
 
 .header h1 {
+    padding-right: 200px;
+
     font-family: "PoppinsExtraBold", sans-serif;
     font-size: 4rem;
     line-height: 1.2;
@@ -85,6 +87,8 @@
 }
 
 .header p.tagline {
+    padding-right: 200px;
+
     font-family: "Roboto", sans-serif;
     color: #ff6b00;
     font-weight: 800;
@@ -94,6 +98,8 @@
 }
 
 .header .description {
+    padding-right: 200px;
+
     font-family: "Roboto", sans-serif;
     color: #333;
     max-width: 800px;
@@ -104,6 +110,7 @@
 }
 
 .partner-header h2 {
+    padding-right: 200px;
     font-family: "PoppinsExtraBold", sans-serif;
     font-size: 4rem;
     line-height: 1.2;
@@ -111,6 +118,8 @@
 }
 
 .partner-header p.tagline {
+    padding-right: 200px;
+
     font-family: "Roboto", sans-serif;
     color: #ff6b00;
     font-weight: 800;
@@ -120,6 +129,8 @@
 }
 
 .partner-header .description {
+    padding-right: 200px;
+
     font-family: "Roboto", sans-serif;
     max-width: 800px;
     margin-left: auto;
@@ -679,6 +690,7 @@
 
 .speaker-image img {
     width: 100%;
+
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;

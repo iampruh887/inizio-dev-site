@@ -4,17 +4,20 @@ import TeamCard from "./TeamCard";
 import skull from "../assets_team/skull.png";
 
 const memberImages = {};
+
 const images = import.meta.glob("../assets_team/member_imgs/*.webp", {
   eager: true,
 });
+
 Object.entries(images).forEach(([path, module]) => {
-  const fileName = path.replace(/^.*[\\/]/, "");
+  const fileName = path.replace(/^.*[\\/]/, '');
   memberImages[fileName] = module.default;
 });
 
 export default function Body() {
   // Core Team Members
   const coreTeamMembers = [
+
     {
       name: "Arnav Raj",
       designation: "Fest head",
@@ -508,65 +511,89 @@ export default function Body() {
       phone: "7091100696",
       image: skull,
     },
+
   ];
 
+
+
   const renderTeamCards = (members) =>
-    members.map((member, index) => (
-      <TeamCard
-        key={index}
-        name={member.name}
-        designation={member.designation}
-        instaUrl={member.instaUrl}
-        linkedinUrl={member.linkedinUrl}
-        phone={member.phone}
-        image={member.image}
-      />
-    ));
+      members.map((member, index) => (
+          <TeamCard
+              key={index}
+              name={member.name}
+              designation={member.designation}
+              instaUrl={member.instaUrl}
+              linkedinUrl={member.linkedinUrl}
+              phone={member.phone}
+              image={member.image}
+          />
+      ));
 
   // ------------------Maybe Dont Change after this-------------------- //
   return (
-    <div className="bg-[#FFF5Cf] w-full sm:w-[85%] sm:rounded-tr-3xl sm:rounded-br-3xl p-8 mb-[100px]">
+      <div className="bg-[#FFF5Cf] w-full sm:w-[92.12%] sm:rounded-tr-3xl sm:rounded-br-3xl p-8 pl-15 mb-[100px]">
       {/* Core Team */}
-      <TeamInfo team_name="core team !!" team_description="The Masterminds">
-        {renderTeamCards(coreTeamMembers)}
-      </TeamInfo>
+        <TeamInfo
+            team_name="core team !!"
+            team_description="At the heart of everything we do is the Core Team—our guiding force. They set the vision,
+             make strategic decisions, and ensure that every part of the event operates seamlessly. From planning to
+             execution, they are the backbone that keeps our mission alive"
+        >
+          {renderTeamCards(coreTeamMembers)}
+        </TeamInfo>
 
-      {/* Technical Team */}
-      <TeamInfo team_name="tech team !!" team_description="The Digital Wizards">
-        {renderTeamCards(techTeamMembers)}
-      </TeamInfo>
+        {/* Technical Team */}
+        <TeamInfo
+            team_name="tech team !!"
+            team_description="Innovation meets execution with our Tech Team. They are the architects behind our digital
+             presence, ensuring a seamless user experience, developing interactive platforms, and tackling technical
+             challenges with creativity and precision. When it comes to bringing ideas to life, they make the
+             impossible possible."
+        >
+          {renderTeamCards(techTeamMembers)}
+        </TeamInfo>
 
-      {/* Marketing Team */}
-      <TeamInfo
-        team_name="marketing team !!"
-        team_description="The Hype Architects"
-      >
-        {renderTeamCards(marketingTeamMembers)}
-      </TeamInfo>
+        {/* Marketing Team */}
+        <TeamInfo
+            team_name="marketing team !!"
+            team_description="Creativity fuels the Marketing Team as they shape the identity of our event. Through
+            compelling storytelling, impactful designs, and strategic outreach, they amplify our presence, engage
+            our audience, and make sure that our vision reaches far and wide."
+        >
+          {renderTeamCards(marketingTeamMembers)}
+        </TeamInfo>
 
-      {/* Event Management Team */}
-      <TeamInfo
-        team_name="event management team !!"
-        team_description="The Chaos Tamers"
-      >
-        {renderTeamCards(emTeamMembers)}
-      </TeamInfo>
+        {/* Event Management Team */}
+        <TeamInfo
+            team_name="event management team !!"
+            team_description="From coordinating schedules to ensuring that every session runs smoothly, the Event
+          Management Team is the powerhouse behind the execution of our summit. They are the planners, problem-solvers,
+           and crisis managers who ensure that every attendee has an experience to remember."
+        >
+          {renderTeamCards(emTeamMembers)}
+        </TeamInfo>
 
-      {/* Public & Corporate relations Team */}
-      <TeamInfo
-        team_name="public & corporate relations team !!"
-        team_description="The Bridge Builders"
-      >
-        {renderTeamCards(pcrTeamMembers)}
-      </TeamInfo>
+        {/* Public & Corporate relations Team */}
+        <TeamInfo
+            team_name="public & corporate relations team !!"
+            team_description="The voice of our event, the Public Relations Team, ensures that our message reaches the
+          right people at the right time. They manage communication, handle media relations, and create impactful
+          narratives that position our summit as a must-attend experience for entrepreneurs, innovators, and leaders
+          alike"
+        >
+          {renderTeamCards(pcrTeamMembers)}
+        </TeamInfo>
 
-      {/* sponsorship Team */}
-      <TeamInfo
-        team_name="sponsorship team !!"
-        team_description="The Deal Makers"
-      >
-        {renderTeamCards(sponsorTeamMembers)}
-      </TeamInfo>
-    </div>
+        {/* sponsorship Team */}
+        <TeamInfo
+            team_name="sponsorship team !!"
+            team_description="Opportunities don’t just happen; they are created by our Sponsorship Team. They work
+          tirelessly to bring in valuable partnerships, secure funding, and build meaningful collaborations that take
+          our event to the next level. Their efforts help us provide the best resources, experiences, and opportunities
+           for our audience."
+        >
+          {renderTeamCards(sponsorTeamMembers)}
+        </TeamInfo>
+      </div>
   );
 }
