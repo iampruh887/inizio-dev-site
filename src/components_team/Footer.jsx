@@ -66,16 +66,20 @@ const Footer = () => {
                   FOLLOW US
                 </h2>
                 <div className="flex justify-center gap-5">
+                  <a href="https://www.instagram.com/ecell.iiitguwahati?igsh=MTMwbGFudmptZ20xaA==" target="_blank" rel="noopener noreferrer">
                   <img
                       src={instagram}
                       alt="Instagram"
                       className="w-12 h-12 md:w-[60px] md:h-[60px] cursor-pointer transition-transform duration-200 hover:scale-110"
                   />
+                  </a>
+                  <a href="https://www.linkedin.com/company/e-cell-iiit-guwahati/" target="_blank" rel="noopener noreferrer">
                   <img
                       src={linkedIn}
                       alt="LinkedIn"
                       className="w-12 h-12 md:w-[60px] md:h-[60px] cursor-pointer transition-transform duration-200 hover:scale-110"
                   />
+                  </a>
                 </div>
               </div>
             </div>
