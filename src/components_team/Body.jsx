@@ -36,12 +36,29 @@ export default function Body() {
       image: memberImages["em (1).webp"],
     },
     {
+      name: "Arya Sahu",
+      designation: "Team Head",
+      instaUrl:
+          "https://www.instagram.com/aryeahh.s/",
+      linkedinUrl: "https://www.linkedin.com/in/arya-sahu-237701242/",
+      phone: "9171207637",
+      image: memberImages["sponsor (3).webp"],
+    },
+    {
       name: "Chiranjit Saha",
       designation: "Team Head",
       instaUrl: "https://www.instagram.com/rising_sun_cs/",
       linkedinUrl: "www.linkedin.com/in/chiranjit-saha-a3bba5230",
       phone: "8620870598",
       image: memberImages["pcr (1).webp"],
+    },
+    {
+      name: "Gautam Giri",
+      designation: "Team Head",
+      instaUrl: "https://www.instagram.com/_btwits_gautam/",
+      linkedinUrl: "http://www.linkedin.com/in/gautam-giri-b5615528a",
+      phone: "7068140938",
+      image: memberImages["marketing (6).webp"],
     },
     {
       name: "Kartik Sehgal",
@@ -102,7 +119,7 @@ export default function Body() {
       instaUrl: "https://www.instagram.com/prithviiix_x",
       linkedinUrl: "https://in.linkedin.com/in/prithvi-ra",
       phone: "+91 9955095089",
-      image: skull,
+      image: memberImages["tech (13).webp"],
     },
     {
       name: "Alok Vishwakarma",
@@ -205,6 +222,14 @@ export default function Body() {
   ];
 
   const marketingTeamMembers = [
+    {
+      name: "Gautam Giri",
+      designation: "Team Head",
+      instaUrl: "https://www.instagram.com/_btwits_gautam/",
+      linkedinUrl: "http://www.linkedin.com/in/gautam-giri-b5615528a",
+      phone: "7068140938",
+      image: memberImages["marketing (6).webp"],
+    },
     {
       name: "Prince Kumar",
       designation: "Team Head",
@@ -478,6 +503,15 @@ export default function Body() {
   ];
 
   const sponsorTeamMembers = [
+    {
+      name: "Arya Sahu",
+      designation: "Team Head",
+      instaUrl:
+          "https://www.instagram.com/aryeahh.s/",
+      linkedinUrl: "https://www.linkedin.com/in/arya-sahu-237701242/",
+      phone: "9171207637",
+      image: memberImages["sponsor (3).webp"],
+    },
     {
       name: "Kartik Sehgal",
       designation: "Team Head",
