@@ -175,11 +175,12 @@
 }
 .navbar-container {
     width: 100%;
-    position: relative; /* Change from fixed to relative */
+    position: fixed; /* Change from fixed to relative */
     z-index: 100;
     /* display: none; */
     color: #ffffff;
+    top:0px;
     transition: transform 0.3s ease-in-out;
     background: transparent !important;
-    backdrop-filter: blur(0px) !important;
+    backdrop-filter: blur(10px) !important;
 }

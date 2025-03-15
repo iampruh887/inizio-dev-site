@@ -49,9 +49,9 @@ function Home() {
       <title>INIZIO - 25</title>
       <link rel="stylesheet" href="style.css" />
 
-      <section>
+      <section className="topsa">
         <>
-          <div style={{ textAlign: "center", marginBottom: "40px", marginTop: "145px", }}>
+          <div style={{ textAlign: "center", marginBottom: "40px", paddingTop: "145px", }}>
             <h1
               style={{
                 fontSize: "clamp(3rem, 10vw, 7rem)",
@@ -369,11 +369,11 @@ function Home() {
                         <div className="merch-avail">Size Available:</div>
                         <div className="merch-size">
                           <p className="sold">XS</p>
-                          <p className="avail">S</p>
-                          <p className="avail">M</p>
-                          <p className="avail">L</p>
-                          <p className="avail">XL</p>
-                          <p className="avail">XXL</p>
+                          <p className="available">S</p>
+                          <p className="available">M</p>
+                          <p className="available">L</p>
+                          <p className="available">XL</p>
+                          <p className="available">XXL</p>
                         </div>
                         <div className="merch-buy">
                           <button>I WANT IT NOW!</button>

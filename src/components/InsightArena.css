@@ -264,6 +264,7 @@
 }
 
 .slider-container {
+    width: 100vw !important;
     overflow: hidden;
     position: relative;
     margin-bottom: 2rem;
@@ -585,12 +586,7 @@
     }
 }
 
-.slider-container {
-    overflow: hidden;
-    position: relative;
-    margin: 20px 0;
-    width: 100%;
-}
+
 
 .slider {
     display: flex;
@@ -657,12 +653,6 @@
     transform: scale(1.05);
 }
 
-.slider-container {
-    overflow: hidden;
-    position: relative;
-    margin: 20px 0;
-    padding: 10px 0;
-}
 
 .slider {
     display: flex;
@@ -724,13 +714,6 @@
     margin: 0;
 }
 
-/* Update slider styles for better spacing */
-.slider-container {
-    overflow: hidden;
-    position: relative;
-    margin: 20px 0;
-    padding: 20px 0;
-}
 
 .slider {
     display: flex;

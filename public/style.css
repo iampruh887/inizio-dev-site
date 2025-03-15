@@ -778,13 +778,13 @@ body {
    font-size: 1.3rem;
    font-weight: 600;
    color: #131313;
-   letter-spacing: 1px;
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
+   justify-content: space-around;
    flex-wrap: wrap;
-   width: 60%;
+   width: 70%;
    margin: 10px 0px;
+   cursor: pointer !important;
 
 }
 

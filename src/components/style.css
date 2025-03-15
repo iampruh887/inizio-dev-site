@@ -268,15 +268,12 @@
     margin: 0;
 }
 
-.merch-size .sold {
-    background-color: #ff000033;
-    color: #ff0000;
-}
 
-.merch-size .avail {
+/* why is this even there??????? */
+/* .merch-size .available {
     background-color: #00ff0033;
     color: #00ff00;
-}
+} */
 
 .merch-buy {
     display: flex;
@@ -450,33 +447,20 @@
     color: #ff0000;
 }
 
-.merch-size .avail {
+.merch-size .available {
     background-color: var(--light); /* Changed to light beige */
-    color: var(--primary); /* Changed to orange */
+    /* color: var(--primary); Changed to orange */
+    color: #131313;
 }
-.avail {
-    text-color: #131313;
-}
-.merch-size p {
-    font-family: Roboto, sans-serif;
-    font-size: 1.1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 0;
-    background-color: var(--light);
-    color: #000; /* Add this to make text black */
-}
+
 
 .merch-size .sold {
     background-color: var(--light);
     color: #000; /* Changed to black */
     opacity: 0.5; /* Add opacity to indicate sold out */
+    cursor:no-drop;
 }
 
-.merch-size .avail {
-    background-color: var(--light);
-    color: #000; /* Changed to black */
-}
 
 .overlay-box {
     margin-bottom: -30px;
